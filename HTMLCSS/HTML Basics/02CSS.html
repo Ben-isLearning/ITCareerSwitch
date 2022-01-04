@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson 02 - CSS</title>
+    <style>
+      .test-one {
+        color: lightpink;
+      }
+      .test-two {
+        color: dodgerblue;
+      }
+      .test-three {
+        color: firebrick;
+      }
+    </style>
   </head>
   <body>
     <h1>Lesson 02 - Cascading Style Sheets</h1>
@@ -46,6 +57,7 @@
     </p>
     <br />
     <h2>Inline CSS (Poor Practice)</h2>
+    <p>Creating styles on each line of code</p>
     <p style="color: red">This Should be red</p>
     <p>
       Created by giving the paragraph element the attribute of; &lt;p
@@ -60,10 +72,32 @@
       style="background-color:lightpink;">
     </p>
     <br />
-    <h2></h2>
-    <p></p>
+    <h2>Embedded CSS</h2>
+    <p>
+      Using the &lt;style> elemenet within the &head> of the HTML Document,
+      <br />
+      We've created different styles for these paragraphs below. <br />
+      <br />
+      .test-one {<br />
+      color: lightpink;<br />
+      }<br />
+      <br />
+      .test-two {<br />
+      color: dodgerblue;<br />
+      }<br />
+      <br />
+      .test-three {<br />
+      color: firebrick;<br />
+      }<br />
+    </p>
+    <p class="test-one">Creating styles in the Head of the HTML File.</p>
+    <p class="test-two">Creating styles in the Head of the HTML File.</p>
+    <p class="test-three">Creating styles in the Head of the HTML File.</p>
     <br />
-    <h2>Cheat Sheet</h2>
+    <br />
+    <br />
+
+    <h2>CSS Cheat Sheet</h2>
     <p>
       Color: (Changes to color of Text) <br />
       background-color: (Changes the color of the background) <br />
