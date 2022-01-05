@@ -89,17 +89,40 @@
         Aaand these beauties;         &lt; &gt;    
     </p>
     <br>
-    <h2>Structural / Block Elements</h2>
-    <p> Div - Creates Dividers [NON SEMANTIC] <br> 
-        Header - First Structure Element - Generally Contains Heading Elements <br>
-        Nav - Contains Navigation Links <br>
-        Main - Contains main content of the webpage - Should only have 1 per webpage <br> 
+    <h2> Block Elements</h2>
+    <p> Address - For contact information<br> 
+        Article - for self contained content<br> 
+        Aside - For other content related to main content <br> 
+        blockquote - For long block quotation <br> 
+        Disclosure - Disclosure Widget<br> 
+        Dialog - Dialog box <br> 
+        dd - Descriptes a term in a description list <br> 
+        Div - Creates Dividers [NON SEMANTIC] <br> 
+        dl - Description List<br> 
+        dt - Description Term <br> 
+        Fieldset - Fieldset Label <br> 
+        figure -    groups media content with a caption <br> 
+        figcaption - Figure Caption <br> 
         Footer - (Optional) Contains general Links + Copyright information <br> 
+        form - input form <br> 
+        h1 - h6 - Heading levels 1-6 <br> 
+        Header - First Structure Element - Generally Contains Heading Elements <br>
+        hgroup - groups header information <br>
+        hr - creates a horizontal rule <br>
+        li - List item <br>
+        Main - Contains main content of the webpage - Should only have 1 per webpage <br> 
+        Nav - Contains Navigation Links <br>
+        ol - Ordered List <br>
+        p  - Paragraph  <br>    
+        pre - Preformatted text <br>
+        section - self-contained section of website <br>
+        table - a table <br>
+        ul - Unordered List <br>
         Create a Template; See <a target="blank" href="template.html"> This Template</a>
     </p>
     <br> 
-    <h2>Span / Inline Elements</h2>
-    <p>Span - Acts like Div, But inline. [NON SEMANTIC] <br> </p>
+    <h2>Inline Elements</h2>
+    <p>Span - Acts like Div, But inline. [NON SEMANTIC] <br></p>
   <br />
   <h2>Horizontal Rule / </h2>
   <p> <hr> &lt;hr> Looks like this <hr>  </p>
@@ -136,6 +159,21 @@
     Example: Use a thumbnail image as a hyperlink for the whole image; Example Google Images <br>
 </p>
     <br />
+    <h2>figure element</h2>
+    <p>The figure element provides a place for an img to be accompanied by some text (a caption) </p>
+    <figure style="border: 2px solid red;">
+        <img src="/Images/html5Image.JPG"
+        alt="Elephant at sunset">
+    </figure>
+    <br />
+    <h2>figcaption  element</h2>
+    <p>The figcaption element should be used to provide text to an image inside of a figure element</p> <br> 
+    <figure style="border: 2px solid red;">
+        <img src="/Images/html5Image.JPG">
+        <figcaption> Text here is  correct, Inside the figure</figcaption>
+    </figure>
+    <br />
+
     <h2>HTML Validation</h2>
     <p>HTML Checker ~ Is everything correct in line with W3C Standards? <br> 
         Navigate to <a href="https://validator.w3.org">W3C Markup Validation Service</a> <br>
@@ -144,6 +182,11 @@
         This code has 4 errors; "Error: No p element in scope but a p end tag seen." <br> 
         Will Revisit after learning about scope...
      </p>
+
+     <h2>Cheat Sheet</h2>
+     <p></p>
+     <br />
+
   </body>
 </html>
 
