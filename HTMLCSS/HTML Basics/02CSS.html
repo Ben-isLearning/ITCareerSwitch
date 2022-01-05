@@ -15,6 +15,15 @@
       .test-three {
         color: firebrick;
       }
+      .bg-one {
+        background-color: lightpink;
+      }
+      .bg-two {
+        background-color: dodgerblue;
+      }
+      .bg-three {
+        background-color: firebrick;
+      }
     </style>
   </head>
   <body>
@@ -94,28 +103,89 @@
     <p class="test-two">Creating styles in the Head of the HTML File.</p>
     <p class="test-three">Creating styles in the Head of the HTML File.</p>
     <br />
-    <h2>Configuring Text with CSS</h2>
-    <p>
+    <br />
+    <br />
+    .bg-one { <br />
+    background-color: lightpink; <br />
+    } <br />
+    .bg-two { <br />
+    background-color: dodgerblue; <br />
+    } <br />
+    .bg-three { <br />
+    background-color: firebrick; <br />
+    } <br />
+    <p class="bg-one">Creating styles in the Head of the HTML File.</p>
+    <p class="bg-two">Creating styles in the Head of the HTML File.</p>
+    <p class="bg-three">Creating styles in the Head of the HTML File.</p>
+    <h2 style="font-family: 'Times New Roman', Times, serif">
+      Configuring Text with CSS
+    </h2>
+    <p
+      style="
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
       Headings should be Serif <br />
       Content should be Sans-serif <br />
-      Monospace <br />
-      Cursive <br />
-      Fantasy <br />
-      Who really Cares though? <br />
-      Font-family: sets the font of the
+      font-family: attribute sets the font stack. <br />
+      (Font Stack = 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;) <br />
+      Web Browser will attempt to use option 1, then option 2, etc until it
+      reaches generic
     </p>
+    <p style="font-family: monospace">
+      Monospace: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Dolorem, voluptas? <br />
+    </p>
+    <p style="font-family: cursive">
+      Cursive: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
+      fugit? <br />
+    </p>
+    <p style="font-family: fantasy">Fantasy: Who really Cares though? <br /></p>
+
     <br />
-    <h2>Text Sizes</h2>
+    <h2>font-size:  /Measuring Text</h2>
+    <p style="font-size: 20px;">
+      Text Can be measures in;   
+    </p>
+    <p style="font-size: 25px;">
+      Pixels ~ 25px; 
+    </p>
+    <p style="font-size: 1em;">
+      Em ~ 1em; 
+      </p>  
+      <p style="font-size: 1rem;">
+      Rem ~ 1rem; 
+      </p>
+      <p style="font-size: 62.5%;">
+      Percentace Value ~ 62.5%
+      </p>
+  
+    <br />
+    <h2>font-weight:  / Boldness</h2>
     <p>
-      Text Can be measures in; <br />
-      Pixels ~ 100px; <br />
-      Em ~ 1em; <br />
-      Rem ~ 1rem; <br />
-      Percentace Value ~ 62.5% <br />
+      Font weight controls the boldness of the text, we can use light, bold,
+      etc, <br />
+      Or numeric values between 100 - 900 (in 100s)
+    </p>
+    </p>
+    <p style="font-weight: 400">
+      style="font-weight: 400: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vero!
+    </p>
+    <p style="font-weight: 700">
+      style="font-weight: 700: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, vero!
     </p>
     <br />
-    <h2></h2>
-    <p></p>
+    <h2>font-style:  / Italics pretty much</h2>
+    <p style="font-style: italic;">style="font-style: italic;" Lorem ipsum dolor sit amet. </p>
+    <p style="font-style: oblique;">style="font-style: oblique;"  Lorem ipsum dolor sit amet.</p>
+    <p style="font-style: normal;">style="font-style: normal;"  Lorem ipsum dolor sit amet.</p>
+    <br />
+    <h2>line-height: /How </h2>
+    <p style="line-height: 50px;"> style="line-height: 50px;": Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, hic.</p>
+    <p style="line-height: 2rem;"> style="line-height: 2rem;": Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, hic.</p>
+    <p style="line-height: 2cm;"> style="line-height: 2cm;": Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, hic.</p>
     <br />
 
     <br />
