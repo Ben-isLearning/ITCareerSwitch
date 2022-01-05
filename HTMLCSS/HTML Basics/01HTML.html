@@ -208,6 +208,44 @@ value="" max="" min="" low="" high="" optimum="" id="" <br> <br>
     &lt;progress id="progress" max="100" value="20"> 20% &lt;/progress>
 </p>
     <br />
+    <h2>Map Element </h2>
+    <p>the &lt;map> element is used to create clickable area/areas on an image. <br>
+        &lt;map> requires a single attribute, name="", as well as an &lt;img> with the attribute usemap="#"to work with. <br> 
+        PS: Name="" must be the same as usemap="#blabla"
+        And atleast one &lt;area> element to create a clickable area <br> <br>
+        The &lt;area> element requires 4 attributes, <br>
+        shape=""; Which identifies what type of shape to be used <br>
+        coords="":Which takes 4 (or more) coordinates, as the start(x,y) and end(x,y)  <br> 
+        locations of the clickable shape <br>   
+        alt="": To provide an alternative for screen readers <br>
+        href="": to create the clickable section; <br>  
+
+        <img src="Images/html5Image.JPG" alt="Workplace" usemap="#workmap">
+
+        <map name="workmap">
+          <area shape="rect" coords="0,0,55,400" alt="Computer" href="computer.htm">
+        </map>
+        <br> 
+        Types of Shape: <br>
+        Rect (4 coords - xy start, xy end) <br> 
+        Circle (3 coords - xy start, radius) <br>
+        Poly  (So many coords - Do not use) <br>
+        Default (to the entire reigon/image) <br>
+    </p>
+    
+    <br />      
+    <h2></h2>
+    <p></p>
+    <br />      
+    <h2></h2>
+    <p></p>
+    <br />    
+    <h2></h2>
+    <p></p>
+    <br />    
+    <h2></h2>
+    <p></p>
+    <br />
 
     <h2>HTML Validation</h2>
     <p>HTML Checker ~ Is everything correct in line with W3C Standards? <br> 
