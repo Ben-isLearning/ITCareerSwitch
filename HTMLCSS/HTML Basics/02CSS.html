@@ -242,8 +242,8 @@
    ul li {color: green;} <br>
 </p>
     <br />
-    <div style="margin: 10px 200px; ">
-        <h2>Margin: / Moving Content</h2>
+    <div style="margin: 10px 200px; Border: 2px solid red; ">
+        <h2>Margin: / Between Border and other Elements</h2>
     <p>The Margin Property takes 4, 3, 2 or 1 Value. <br> 
     Margin: 5px 10px 15px 5px; Sets top, right, bottom, left (like a compass) <br> 
     Margin: 5% auto;  Sets Vertical to 5%, and Horizontal to Auto <br>  
@@ -252,6 +252,27 @@
     Margin: Is shorthand for Margin-left: Margin-right: Margin-top: Margin-bottom:</p>
     </div>
     <br />
+    <div style="border: 2px solid blue; margin: 10px 100px; padding: 10px 100px;">
+    <h2>Border: / Border of Content</h2>
+    <p>The Border Property takes 3, Values. Thickness, Style, Color <br> 
+      Border: 5px dotted blue; Sets overall border <br> 
+      Border: Is shorthand for border-left: border-right: border-top: border-bottom: <br> 
+      Thickness: px <br>  
+    Styles are: None, Inset, Outset, Double, Groove, Ridge, Solid, Dashed, Dotted. <br> 
+    Color: Pick one <br> 
+   </p>
+    </div>
+    <br />
+    <div style="border: 2px solid green; padding: 10px 200px;">
+    <h2>Padding: / Between Content and Border</h2>
+    <p>The Margin Property takes 4, 3, 2 or 1 Value. <br> 
+      Padding: 5px 10px 15px 5px; Sets top, right, bottom, left (like a compass) <br> 
+      Padding: 5% auto;  Sets Vertical to 5%, and Horizontal to Auto <br>  
+      Padding: 1em auto 2em; Sets top to 1 em, horizontal to auto, and bottom to 2em <br>
+      Padding: 2em; Sets all 5 sides the same <br> 
+      Padding: Is shorthand for padding-left: padding-right: padding-top: padding-bottom:</p>
+   </div>
+ <br />
 
     <h2> The Cascade</h2>
     <p>Is the Order of precedence; <br> 
@@ -263,11 +284,17 @@
     Whatever style rule has the most precedence, will be applied to the webpage <br>  
    </p>
     <br />
-    <h2></h2>
-    <p></p>
+    <h2>CSS Validation</h2>
+    <p>Validate your CSS at <a href="https://jigsaw.w3.org/css-validator/">W3C's CSS Validation Service</a> <br>
+    Upload via File or Direct input </p>
     <br />
-    <h2></h2>
-    <p></p>
+    <h2>Graphics</h2>
+    <p>GIF / JPEG or JPG / PNG / WEBP / WEBM?</p>
+    <p>GIF - Animations</p>
+    <p>JPEG - Photos</p>
+    <p>PNG - OK </p>
+    <p>WEBP - Brand New - Well Good! </p>
+    <p>WEBM - Great Video</p>
     <br />
     <h2></h2>
     <p></p>
@@ -283,9 +310,14 @@
     <br />
 
     <h2>CSS Cheat Sheet</h2>
+
+    <h4>Colors</h4>
     <p>
       Color: (Changes to color of Text) <br />
       background-color: (Changes the color of the background) <br />
+    </p>
+    <h4>Font / Text    </h4>
+    <p>
       font-size: Sets Size of font<br />
       font-weight: Sets Boldness of font <br />
       font-style: Sets font Decoration <br />
@@ -299,9 +331,14 @@
       white-space: (sets rules for whitespace) <br />
       text-shadow: Horizontal Vertical Blur Color; 00px 00px 00px Color;
       Negative goes left or down<br />
-      Margin:  / px rem % auto
-
-      <br />
     </p>
+      <h4>Box Model</h4>
+      <p>
+      Margin:  / px rem % auto
+      Border:  size style color 
+      Padding: / px rem % auto
+      (content)
+    </p>
+    <br />
   </body>
 </html>
