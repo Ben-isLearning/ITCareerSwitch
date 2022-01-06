@@ -5,18 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style></style>
     <script src="01.js"></script>
   </head>
   <body>
     <h1>Javascript</h1>
     <h2>The Interactive Engine of a Webpage <br />Created by Brendan Eich</h2>
     <br />
-    <h2>How to add JavaScript to HTML</h2>
-    <p>
-      Within the head, add the script tag and set the src="" (Source) to your JS
-      file.
-    </p>
-    <br />
+
+    <div>
+        <h2>How to add JavaScript to HTML</h2>
+        <p>
+          1) Within the head, add the script tag and set the type="" to "text/javascript", <br>
+          Then type the Js /<strong> Embedded Script</strong> <br>
+          Con - Takes a while to Parse / Load on the DOM <br>
+          &lt;script type="text/javascript"> <br>
+          Javascript Goes here <br>
+          &lt;script> <br> <br>
+          2) Within the Head, Body, wherever you need it. / <strong>Inline Script </strong> <br>
+          each &lt;script> will be loaded and ran from top to bottom; <br> <br>
+          3) BEST PRACTICE /<strong> External Script </strong><br>
+          Do not embed JS directly into the HTML, <br>
+          Simply a add script the head, and have the source elsewhere! <br> <br>
+          &lt;script src="scripts/script01.js" type="text/javascript"> &lt;script>  <br> 
+        </p>  
+        <br />
+    </div>
+  
     <div>
       <h2>Modify HTML Content</h2>
       <p>
@@ -134,13 +149,40 @@
       <br />
     </div>
 
-    <h2>Validate data input into Forms</h2>
-    <p>
-      Ensures the input data matches the type of data we are expecting <br />
-      Phone number is input as a number <br />
-      Email address is input as something@somethingelse.com <br />
-    </p>
-    <br />
+    <div>
+        <h2>Validate data input into Forms</h2>
+        <p>
+          Ensures the input data matches the type of data we are expecting <br />
+          Phone number is input as a number <br />
+          Email address is input as something@somethingelse.com <br /> <br>
+          The below is an example of Basic Number validation <br>
+
+          <p>Please input a number between 1 and 10:</p>
+          <input id="numb" type="number">
+          <button type="button" onclick="myFunction()">Submit</button>
+          <p id="demo4"></p>
+
+          <script>
+              function myFunction() {
+                  var x, text; 
+                  // Get the value of the input field with the id-"numb", Call it X for Use
+                  x = document.getElementById("numb").value;
+
+                  // If x is Not a Number or <1 or >10 
+                if (isNaN(x) || x < 1 || x > 10 ) {
+                    text = "Error - Input is invalid"; 
+                } else {
+                    text = "Input OK";
+                }
+                // Sets the innerHTML of "demo4" to the  'text' variable set 
+                // within the conditional logic  
+                document.getElementById("demo4").innerHTML = text; 
+              }
+          </script>
+        </p>
+        <br />
+    </div>
+
     <h2>Real World examples of JS</h2>
     <p> Moving the world in Google Maps <br>
     Clicking anything that has functionality <br>
