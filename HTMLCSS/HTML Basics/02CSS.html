@@ -59,11 +59,19 @@
     <br />
     <h2>Using Color on Web Pages</h2>
     <p>
-      Use Hexidecimal or RBGA Use either
+      Use Hexidecimal or RBGA or HSLA Use either
       <a href="https://htmlcolorcodes.com">HTML Color Codes</a> or
       <a href="https://www.color-hex.com">Color Hex</a> <br />
       To Pick and select colours themes etc.
     </p>
+    <br />
+    <h2>Opacity (Same Color below)</h2>
+    <p style="background-color: rgba(111,111,111,0.2);"> Connoted as A within RGBA or HSLA <br> 
+    Opacity value range is 0 to 1. </p>
+    <p style="background-color: rgba(111,111,111,0.5);"> Connoted as A within RGBA or HSLA <br> 
+      Opacity value range is 0 to 1. </p>
+      <p style="background-color: rgba(111,111,111,0.8);"> Connoted as A within RGBA or HSLA <br> 
+        Opacity value range is 0 to 1. </p>
     <br />
     <h2>Inline CSS (Poor Practice)</h2>
     <p>Creating styles on each line of code</p>
@@ -260,6 +268,7 @@
       Thickness: px <br>  
     Styles are: None, Inset, Outset, Double, Groove, Ridge, Solid, Dashed, Dotted. <br> 
     Color: Pick one <br> 
+    border-radius: (1 - 4 values) TL / TR / BR / BL 
    </p>
     </div>
     <br />
@@ -296,20 +305,68 @@
     <p>WEBP - Brand New - Well Good! </p>
     <p>WEBM - Great Video</p>
     <br />
-    <h2>Background Images</h2>
-    <p>background-image: <br>
-      background-color: <br>
-      background-repeat:  (repeat; repeat-x; repeat-y; no-repeat; )<br>
-      background-position:   Requires 2 values left / right / center + top /center /bottom <br>  Sets starting position of background (if only 1 value provided, 2nd value defaults to center) <br> 
-      background-attatchment: Fixed; / Scroll; Determines if bg will scroll or be attatched
+    <h2>background-image:</h2>
+    <p>Background image property sets one or more background images for an element. <br> <br>
+     url("xxx"); Sets the source to an image via url <br> 
+     none;   Sets the source to none <br> 
+     conic-gradient([from XXdeg[Angle]] [at xx% xx% [Position]], color, color, ...); (Can have many colors) <br>
+     Sets colour change from A to Z in a cone around center <br>
+     linear-gradient(direction [to xx [or XXdeg]], color1, color2, ... ); (can have many colors) <br>
+     Sets color change from A to Z in a line <br>
+     radial-gradient(shape size at position, start-color, ... , end-color); (Can have many colors) <br> 
+     Sets color change from A to Z in a circle. 
+     repeating-conic-gradient();  <br>
+     repeating-linear-gradient(); <br>
+     repeating-radial-gradient(); <br>
+     initial; <br>
+     inherit; <br>
     </p>
     <br />
-    <h2></h2>
-    <p></p>
+    <h2>Background-color:</h2>
+    <p>background color property sets the backgground color of an element. <br> <br>
+      background-color: color|transparent|initial|inherit; <br>
+      background-color: rgba(111,111,111,0.2); Is fine 
+    </p>
+    <br />
+    <h2>Background Images</h2>
+    <p>background-image: <br>
+      background-repeat:  (repeat; repeat-x; repeat-y; no-repeat; )<br>
+      background-position:   Requires 2 values left / right / center + top /center /bottom <br>  Sets starting position of background (if only 1 value provided, 2nd value defaults to center) <br> 
+      background-attatchment: Fixed; / Scroll; Determines if bg will scroll or be attatched <br>
+      background-clip:  (No effect if background-attatchment:fixed; is in use)
+      background-size: 
+    </p>
+    <br />
+    <h2>box-shadow: </h2>
+    <p>box-shadow: is used to give shadow to block-level elements. <br>
+    box-shadow: takes 4 values, Horizontal | Vertical | Blur Radius | Colour; <br>
+    <div style="box-shadow: 100px 10px 20px red;">
+      <p>style="box-shadow: 100px 10px 20px red;" Lorem ipsum dolor sit amet.</p>
+    </div>
+    <br>
+    <br>
+    <div style="box-shadow: -100px -10px 20px red;">
+      <p>style="box-shadow: -100px -10px 20px red;" Lorem ipsum dolor sit amet.</p>
+    </div>
+     </p>
+    <br />
+    <h2>Color Schemes;</h2>
+    <p>Complementaty; 1 main, 1 opposite <br>
+    Split; 1 main, 1 opposite, 2 others?   <br>
+    Triadic; 3 Main taken from tips of color wheel as if triangle <br>
+    tetradic: 2 main, 2 opposite, (2 pairs) 
+  </p>
+    <br />
+    <h2>3 Second Rule</h2>
+    <p> Make sure the site load within 3 seconds. </p>
     <br />
     <h2></h2>
     <p></p>
     <br />
+    <h2></h2>
+    <p></p>
+    <br />
+
 
     <br />
     <br />
@@ -345,6 +402,7 @@
       Padding: / px rem % auto
       (content)
     </p>
+    
     <br />
   </body>
 </html>
