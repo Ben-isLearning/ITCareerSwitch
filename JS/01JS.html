@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="01.js"></script>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <h2>The Interactive Engine of a Webpage <br />Created by Brendan Eich</h2>
+    <br />
+    <h2>How to add JavaScript to HTML</h2>
+    <p>
+      Within the head, add the script tag and set the src="" (Source) to your JS
+      file.
+    </p>
+    <br />
+    <div>
+      <h2>Modify HTML Content</h2>
+      <p>
+        document.getElementByID("demo").innerHTML = "Hello Javascript"; <br />
+        <br />
+        Look Through the HTML document. (document.) <br />
+        Find the element by ID ("demo") [&lt;div id="demo"> Exists somewhere]
+        <br />
+        Replace the innerHTML from what it was, to "Hello Javascript"; <br />
+        The Below example shows this through the click of a button <br />
+      </p>
+      <p id="demo1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+        natus.
+      </p>
+      <button
+        type="button"
+        onclick="document.getElementById('demo1').innerHTML = ''"
+      >
+        No Thanks.
+      </button>
+      <button
+        type="button"
+        onclick="document.getElementById('demo1').innerHTML = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, natus.'"
+      >
+        Bring it Back!
+      </button>
+      <br />
+    </div>
+
+    <div>
+      <h2>Change HTML Attributes</h2>
+      <p>
+        var image = document.getElementById("myimage"); <br />
+        image.src = "images.newimage.jpg"; <br />
+        Declare that image should equal <br />
+        Look through the HTML Document. (document.) <br />
+        find the element by ID ("myimage") [&lt;img id="myimage"> exists
+        somewhere] <br />
+        replace the elements' image's src (Source) attrubute to
+        "image.newimage.jpg;" <br />
+        Each Image Changes once; This action is acheived by a function
+        attatched: <br />
+        inspect for more ~ Beware this is poor implementation of JS<br />
+        <br />
+        <img
+          id="imageone"
+          onclick="changeImage()"
+          src="this.jpg"
+          height="200"
+          width="280"
+        />
+        <img
+          id="imagetwo"
+          onclick="changeImage2()"
+          src="that.jpg"
+          height="200"
+          width="280"
+        />
+
+        <script>
+          function changeImage() {
+            var image = document.getElementById("imageone");
+            if (image.src.match("this")) {
+              image.src = "that.jpg";
+            } else {
+              img.src = "this.jpg";
+            }
+          }
+          function changeImage2() {
+            var image = document.getElementById("imagetwo");
+            if (image.src.match("that")) {
+              image.src = "this.jpg";
+            } else {
+              img.src = "that.jpg";
+            }
+          }
+        </script>
+      </p>
+    </div>
+
+    <div>
+      <br />
+      <h2>Change HTML Styles through CSS</h2>
+      <p>
+        document.getElementById("demo").style.fontSize = "25px"; <br />
+        Look through HTML Document. (document.) <br />
+        find the element by ID ("demo") [&lt;div id="demo"> Exists somewhere]
+        <br />
+        replace the elements' style, attribute font-size to "25px"; <br />
+        <br />
+        The below example changes the styling of a paragraph with the click of a
+        button; Inspect for more <br />
+      </p>
+
+      <p id="demo3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit,
+        possimus.
+      </p>
+      <script>
+        function changeFont() {
+          let x = document.getElementById("demo3");
+          x.style.fontSize = "25px";
+          x.style.color = "red";
+        }
+        function changeBack() {
+          let x = document.getElementById("demo3");
+          x.style.fontSize = "inherit";
+          x.style.color = "inherit";
+        }
+      </script>
+      <button type="button" onclick="changeFont()">Change Text!</button>
+      <button type="button" onclick="changeBack()">Change Back!</button>
+      <br />
+      <br />
+    </div>
+
+    <h2>Validate data input into Forms</h2>
+    <p>
+      Ensures the input data matches the type of data we are expecting <br />
+      Phone number is input as a number <br />
+      Email address is input as something@somethingelse.com <br />
+    </p>
+    <br />
+    <h2>Real World examples of JS</h2>
+    <p> Moving the world in Google Maps <br>
+    Clicking anything that has functionality <br>
+</p>
+    <br />
+  </div>
+  </body>
+</html>
