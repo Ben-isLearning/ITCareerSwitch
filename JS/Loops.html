@@ -9,13 +9,67 @@
   <body>
     <h1>Loops!</h1>
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Automation;</h2>
+      <p>
+        Instead of typing; <br />
+        console.log(myArray[0]); <br />
+        All the way to <br />
+        console.log(myArray[50]); to see the results, <br />
+        <strong>Just loop through it!</strong>
+      </p>
       <br />
     </div>
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>While Loop</h2>
+      <p>
+        let (Our Variable). while (condition is true) { action, increment}
+        <br />
+        <br />
+        <strong>
+          let i = 1; <br />
+          while (i &lt;= 10 ) { <br />
+          console.log(i) <br />
+          i++; <br />
+          } <br />
+        </strong>
+        <br />
+        Putting it into practice; <br /> 
+        <p id="demo"> This text will be replaced</p>
+        <script>
+        let message =  "This text will be replaced";
+        let i = 1;
+        // Set text to empty string to prevent 1st value being undefined + result 
+        let text = "";
+        while (i <= 10 ) {
+        text +="<br> The Number is " + i; 
+        i++;
+        }
+        console.log(text);
+        </script>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = text"> Click here to Reveal!</button>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = message"> Click here to Reset!</button>
+        <br> <br> <br>
+        Putting it into practice with an arrays; <br> <br>
+        let cars = ["Broom", "Gus", "Vanny"];<br>
+        let i = 0; <br>
+        let text = ""; <br>
+        while (cars[i]) {<br>
+          text += cars[i] + "&lt;br>";
+          i++<br>
+        }<br>
+        <script>
+          let cars = ["Broom", "Gus", "Vanny", "Shinee McGee"];
+          let o = 0;
+          let text1 = "";
+          let message1 = "Testing with Arrays"
+          while (cars[o]) {
+          text1 += cars[o] + "<br>"; o++
+          }
+        </script>
+        <p id=demo2>Testing with Arrays</p>
+         <button type="button" onclick="document.getElementById('demo2').innerHTML = text1"> Click here to Reveal!</button>
+         <button type="button" onclick="document.getElementById('demo2').innerHTML = message1"> Click here to Reset!</button>
+      </p>
       <br />
     </div>
     <div>
