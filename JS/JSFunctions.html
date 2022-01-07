@@ -41,6 +41,15 @@
         </strong>
         Step 2; Call <br />
         <strong>show();</strong>
+        <br>
+        <br>
+        Example:  This is Janky AF <br>
+        <strong>
+          let x = function (a,b) {return a*b}; <br>
+          console.log(x); <br>
+          let z = x(4,3); <br>
+          console.log(z); <br>
+        </strong>
       </p>
       <br />
     </div>
@@ -92,17 +101,64 @@
         trackSuit!
       </p>
       <br />
+      Example: 
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Invoking Functions</h2>
+      <p>
+        Functions can be Invoked (or Called) by an event <br />
+        User clicking a button <br />
+        Invoked by other JS Code <br />
+        Automatically / Self-invoked <br />
+        <br />
+
+        The return Keyword defines the value that is "returned" <br />
+        back to the caller, and causing the function to stop <br />
+        <br />
+        Example: Here, the function will return the product of a * b
+        <br />
+        <strong>
+          function sumMultiplication (a, b) { <br />
+          return a * b; <br />
+          } <br />
+        </strong>
+        <br />
+        <br />
+        Example; Whereas here the same function is called, <br />
+        but the returned value will be stored as the variable X<br />
+        <strong>let x = sumMultiplication(4, 3); <br /></strong>
+        <br />
+        The code has been Executed once, Now we are able to use the output data
+        (Variable X) <br />
+        Elsewhere in our code / website <br> <br>
+        We can take it a step further by including our function in an expression. <br> <br>
+        <strong>let z = sumMultiplication(4,3) * 2; </strong>
+
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Best Practice; Declare before Invoking / Calling</h2>
+      <p>
+        Define your Functions in the Js file, then invoke them later. <br />
+        If you attempt to invoke something before it is declared, It will go
+        boom.
+      </p>
+      <p>
+        <h4>Functions can be declared Globally, or Nested inside other functions.</h4>
+        Example 1: Calculating the Square of something <br /> <br>
+        <strong>
+          function square(x) { <br />
+          return x * x; <br />
+          } <br />
+        </strong>
+        Invoke it to see it working; <br> 
+        <strong>square(6); <br></strong>
+        <br>
+
+      </p>
       <br />
     </div>
   </body>
