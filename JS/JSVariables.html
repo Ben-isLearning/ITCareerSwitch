@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Variables</h1>
+    <div>
+      <h2>Standard Variables - What are Variables?</h2>
+      <p>
+        Variables are used to store information for later use <br />
+        Variables carve a point in memory that store specific values <br />
+        Could be data that is input by a user <br />
+        Could be a HTML element (Or multiple) <br />
+        Could be a Number | String | Boolean Value <br />
+        <br />
+
+        Example; let customerTextBox =
+        document.getElementByID("customerTextBox");
+        <br />
+        In later code, the customerTextBox variable could be referenced, rather
+        than the longer code <br />
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2>Declare One Line or Multiple; Either works</h2>
+      <p>
+        let person = "John Doe", carName = "Volvo", price = "200"; <br />
+        or <br />
+        let person = "John Doe",<br />
+        carName = "Volvo", <br />
+        price = "200"; <br />
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2>Declare Varible without Value? = Undefined</h2>
+      <p>
+        JavaScript is a Loosely typed Language - It'll figure out 55 is an
+        integer <br />
+        let oxygenReading = ""; (Undefined) <br />
+        let oxygenReading = 55; (Number - No Quotes) <br />
+        let oxygenReading = "55"; (String - Quotes) <br />
+        let oxygenReading = true (Boolean - true or false) <br />
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2>Concatination (Adding strings)</h2>
+      <p>
+        let myName = "John Doe"; <br />
+        let myAge = 21; <br />
+        let message = myName + " " + "is " + myAge; <br />
+        console.log(message); <br />
+        Returns "John Doe is 21"
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2>Define Variable from HTML element</h2>
+      <p>
+        Revisiting the example earlier; <br />
+        let image (Our Variable) = (HTMLDocument).(elementIdEqualTo)("myimage");
+        <br />
+        <strong>let image = document.getElementById("myimage");</strong> <br />
+        (Our Variable).(Source) = ("newValue"); <br />
+        <strong>image.src = "images.newimage.jpg"; </strong><br />
+        Declare that image should equal <br />
+        <br />
+
+        Each Image Changes once; This action is acheived by a function
+        attatched: <br />
+        inspect for more ~ Beware this is poor implementation of JS<br />
+        <br />
+        <img
+          id="imageone"
+          onclick="changeImage()"
+          src="this.jpg"
+          height="200"
+          width="280"
+        />
+        <img
+          id="imagetwo"
+          onclick="changeImage2()"
+          src="that.jpg"
+          height="200"
+          width="280"
+        />
+
+        <script>
+          function changeImage() {
+            var image = document.getElementById("imageone");
+            if (image.src.match("this")) {
+              image.src = "that.jpg";
+            } else {
+              img.src = "this.jpg";
+            }
+          }
+          function changeImage2() {
+            var image = document.getElementById("imagetwo");
+            if (image.src.match("that")) {
+              image.src = "this.jpg";
+            } else {
+              img.src = "that.jpg";
+            }
+          }
+        </script>
+        <br />
+        <br />
+      </p>
+      <p>
+        Another example of this; <br />
+        <br />
+        let (Our Variable) = (HTMLDocument).(ElementsWithName)(p); <br />
+        <strong>let newParagraph = document.getElementsByTagName("p");</strong>
+        <br />
+        Double check check if it has worked By console Log <br />
+        <strong>console.log(newParagraph); </strong> <br />
+        (our Variable).(specificAttribute) = "new value"; <br />
+        <strong>newParagraph.innerHTML = "This is a new Value";</strong> <br />
+        Double check if it has worked By New Variable +Console Log <br />
+        let (2nd Variable) = (HTMLDocument).(ElementsWithName(p)).(Its Inner
+        HTML); <br />
+        <strong
+          >let newPara = document.getElementsByTagName("p").innerHTML;
+        </strong>
+        <br />
+        <strong>console.log(newPara)</strong>
+      </p>
+    </div>
+    <br />
+    <div>
+      <h2>Arrays [ &nbsp;]</h2>
+      <p>
+        Simply; A variable that contains multiple values + Multiple Types <br />
+        (There is no theoretical Limit) <br />
+        A BOX full of items <br />
+        <br />
+        <h4>How to Declare</h4>
+        Declare [our array / variable] = [ value1, value2, ...]; <br />
+        <strong>let shoppingList = [ "eggs", "milk", 12, 7, "bread"];</strong>
+        <br />
+        <br />
+        Can Display information from an array by index; <br />
+        <strong>console.log(shoppingList[0]);</strong> (Would show 1st item in
+        above Array) <br />
+        <strong>console.log(shoppingList)</strong> (To Double check) <br />
+        <strong>console.log(shoppingList[1]);</strong> (Would show 2nd item in
+        above Array) <br />
+        <strong>console.log(shoppingList[2]);</strong> (Would show 3rd item in
+        above Array) <br />
+
+        <h4>How to Override / Replace</h4>
+        Override / Replace Item in an Array <br />
+        <strong>shoppingList[0] = "bacon";</strong> (Will override/replace the
+        1st Item) <br />
+        <strong>console.log(shoppingList)</strong> (To Double check) <br />
+        <br />
+        <h4>How to Add</h4>
+        Add item to an Array <br />
+        <strong>shoppingList[5] = "sausage";</strong> (Will add a 6th item @
+        index 5) <br />
+        <strong>console.log(shoppingList)</strong> (To Double check) <br />
+        <br />
+
+        <h4>   Real World Example of Arrays; </h4>
+        Go to any website, For example GitHub. Open console, type the bolded
+        text<br />
+        Check out what links are avaliable <br />
+        <br />
+        <strong>let myLinks = document.getElementsByTagName('a');</strong>
+        <br />
+        <strong>console.log(myLinks);</strong> To Check it worked. <br />
+        <strong>myLinks[3];</strong> To show the 4th link in the array <br />
+        <h4>Properties of Arrays</h4>
+        A Property is simply an attribute that defines infomration about an array <br>
+        Such as the length of an array <br>
+        For Example;   <br>
+        Declare (Our Array) = [ value, value, ...]; <br>       
+        <strong>let thisArray = [1, 2, 3, 4, 5]; <br></strong>
+        Log to Console((Our array).(Property)); <br>
+        <strong>     console.log(thisArray.length); </strong>
+       
+        <br>
+        <h4>Methods of Arrays</h4>  
+        A Method is executable code / functionality that belongs to an array or object <br>
+        Essentially Functions that are associated with Arrays <br>
+        For Example; <br>
+        Declare (Our Array) = [ value, value, ...]; <br>       
+        <strong>let thisArray = [1, 2, 3, 4, 5]; <br></strong>
+        (our Array).(This Method()); <br>
+        <strong>thisArray.reverse();</strong>
+
+
+      </p>
+    </div>
+  </body>
+</html>
