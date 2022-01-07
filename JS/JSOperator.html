@@ -13,6 +13,7 @@
       <p>
         = <br />
         Used to Assign value. <br />
+        This = is a command. <br />
         ( let x = 12; )
       </p>
       <br />
@@ -41,23 +42,50 @@
         let Y -= 5; (let (variable) Be Subtracted from by Value = ) <br />
         let A *= 5; (let (variable) Be Times by value = ) <br />
         let B /= 5; (let (variable) Be divided by value = ) <br />
+        <br />
       </p>
-      <br />
     </div>
 
     <div>
       <h4>Comparison Operators</h4>
       <p>
         Used to compare values. <br />
-        == | === | != | &lt; | > | <br />
+        == | === | != | !== | &lt; | > | <br />
         if ( 1 == '1') ~ Loose Equality - Looks at Value (True) <br />
         if ( 1 === '1') ~ Strict Equality - Looks at Value + Type (False) <br />
         if ( x != 5 ) ~ NOT equal - Determines if 1st Value is NOT equal to 2nd
-        Value (True) <br />
+        <br />
+        if ( z !== 5 ) ~ NOT equal - Looks at Value + Type ~Value (True) <br />
         if ( x &lt; 6) ~ LESSTHAN - Determines If 1st value is SMALLER than 2nd
         value <br />
         if ( x > 6) ~ GREATERTHAN - Determines if 1st value is BIGGER than 2nd
         value <br />
+        <br />
+
+        With Loose Equality; <br />
+        <strong>
+          let a = 6; <br />
+          let b = "6"; <br />
+          if (a == b) { <br />
+          console.log("The values are equal! - I dont care about Types! I am
+          Loooose!") <br />
+          } else {<br />
+          console.log("Not Equal!") <br />
+          }; <br />
+          <br />
+        </strong>
+        With Strict Equality; <br />
+        <strong>
+          let a = 6; <br />
+          let b = "6"; <br />
+          if (a === b) { <br />
+          console.log("The numbers are equal!") <br />
+          } else {<br />
+          console.log("These Not Equal! The value may be the same, but they are
+          different types I AM SO STRICT!!!") <br />
+          };
+        </strong>
+        <br />
       </p>
       <br />
     </div>
