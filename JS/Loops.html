@@ -73,17 +73,70 @@
       <br />
     </div>
     <div>
-      <h2></h2>
+      <h2>Do / While Loop</h2>
+      <p> Variant of the While Loop - <strong>The Do While will always run atleast Once.</strong> <br>
+        It will complete one loop, then check if it should continue. <br>
+        Rather than the while loop, that checks before beginning. <br>
+        For example; <br> <br>
+         <strong>
+          let text =""<br />
+          let i = 0; <br />
+          do {<br />
+          text =+ "&lt;br> The number is" + i;<br />
+          console.log(text); <br>
+          i++;<br />    
+          }<br />
+             while (i &lt;= 10 ); <br />
+       <br>  
+           </strong>
+       <script>
+         let text2 ="";
+         let message2="Testing with Arrays (This should Produce a list from 1 - 10)";
+         let ii = 35;
+         do {
+         text2 += "<br> The number is " + ii + " ...Script Ran once, Then checked its operating Conditions and stopped.";
+         console.log(text2);
+         ii++;
+         }
+         while (ii <= 10 );
+       </script>
+               <p id=demo3>Testing with Arrays (This should Produce a list from 1 - 10)</p>
+         <button type="button" onclick="document.getElementById('demo3').innerHTML = text2"> Click here to Reveal!</button>
+         <button type="button" onclick="document.getElementById('demo3').innerHTML = message2"> Click here to Reset!</button>
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2>For Loop</h2>
+      <p>Most Common loop to work with, because it's the most efficient. <br> <br>
+
+        (for Keyword) ( initial expression; condition expression; increment expression;) { statement } <br> <br>
+        <strong>
+          let text = "" <br>
+          for ( i = 0; i &lt;= 5; i++) { <br>
+            text += "Your Number is " + i; <br>
+          } <br>
+        </strong>
+        <script>
+          let text4 = ""
+          let message4 = "Pick a number, any number!"
+          for ( iiii = 0; iiii <= 5; iiii++) {
+          text4 += "Your Number is " + iiii + "<br>";
+          }
+        </script>
+        <p id="demo4">Pick a number, any number! </p>
+         <button type="button" onclick="document.getElementById('demo4').innerHTML = text4"> Click here to Reveal!</button>
+         <button type="button" onclick="document.getElementById('demo4').innerHTML = message4"> Click here to Reset!</button>
+      </p>
+      <br />
+    </div>
+    <div>
+      <h2> For ... In (IN OBJECT)</h2>
       <p></p>
       <br />
     </div>
     <div>
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
-    <div>
-      <h2></h2>
+      <h2>For ... of (OF ARRAY</h2>
       <p></p>
       <br />
     </div>
