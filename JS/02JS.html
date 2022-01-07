@@ -147,6 +147,19 @@
         break - Terminates a switch or loop <br />
         function - declares a function <br />
       </p>
+      <p>
+        This. Keyword points to the property of its parent <br />
+        let myObject {<br />
+        firstName:"John";<br />
+        lastName:"Smith"<br />
+        fullName: function () {<br />
+        return this.firstName + " " + this.lastName; <br />
+        }<br />
+        }<br /><br />
+        Instead of referencing the data by "myObject.firstName" and
+        "myObject.lastName" <br />
+        We can easily use this.firstName for the parent element. <br />
+      </p>
       <br />
     </div>
 
