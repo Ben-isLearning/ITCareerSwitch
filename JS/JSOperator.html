@@ -60,6 +60,10 @@
         value <br />
         if ( x > 6) ~ GREATERTHAN - Determines if 1st value is BIGGER than 2nd
         value <br />
+        if ( X &lt;= Y) ~ LESSTHAN or equal to - Checks if X is smaller or equal
+        to Y <br />
+        if (x >= Y) ~ GREATERTHAN or equal to - Checks if X is bigger or equal
+        to Y <br />
         <br />
 
         With Loose Equality; <br />
@@ -86,6 +90,39 @@
           };
         </strong>
         <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h4>Conditional (Ternary) Operator</h4>
+      <p>
+        (Depending on a specific condition) (if true (?)) Take action A: (if
+        not) Take Action B. <br />
+        (condition) ? true : false; <br />
+        <strong>
+          let playerOne = 100; <br />
+          let playerTwo = 200; <br />
+          <br />
+          let highScore = (playerOne > playerTwo) ? playerOne : playerTwo;
+          <br />
+          console.log(highScore);
+          <br />
+        </strong>
+        <br />
+        Vs If / Else Statement; <br />
+        <strong>
+          let playerOne = 100; <br />
+          let playerTwo = 200; <br /><br />
+
+          if (playerOne > playerTwo) { <br />
+          let highScore = playerOne <br />
+          } else {<br />
+          let highScore = playerTwo<br />
+          console.log(highScore);<br />
+          }
+          <br />
+        </strong>
       </p>
       <br />
     </div>
