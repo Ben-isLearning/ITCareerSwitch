@@ -157,9 +157,82 @@
         Invoke it to see it working; <br> 
         <strong>square(6); <br></strong>
         <br>
-
       </p>
       <br />
     </div>
+    <div>
+      <h2>Functions with Conditional Logic</h2>
+      <p> Conditional logic inside of functions is a fantastic way to check input <br>
+         To ensure that the functions aren't fragile. <br>
+        Example; <br> <br>
+        <strong>
+          function multiply (x,y) { <br>
+            return x*y; <br>
+          } <br>
+        </strong>
+        <br>
+        Checking... <br>
+        <strong>
+          multiply (4,3); <br>
+          multiply (4); <br>
+          multiply ("alpha", "beta"); <br>
+        </strong>
+        <br>
+        This works great if you give it numbers. <br>
+        But if you give in only one number, or anything but a number - it breaks! <br> 
+        Lets bring in the conditional logic... <br>  <br>
+        This function checks if the type of X or the type of Y is Not equal to number <br> 
+        Before doing any further calculations <br> <br>
+
+
+        <strong>
+          function smartMultiply (x,y) {<br>
+            if (typeof x != 'number' || typeof y != 'number') {<br>
+              return "Invalid Input";<br>
+            } else return x * y;<br>
+          }<br>
+        </strong>
+        <br>
+        Checking... <br>
+        <strong>
+          smartMultiply (4,3); <br>
+          smartMultiply (4); <br>
+          smartMultiply ("a",3); <br>
+          smartMultiply (4,"2"); <br> <br>
+        </strong>
+        </p>
+      <br />
+    </div>
+    <div>
+      <h2>Functions with Multiple Arguements</h2>
+      <p> Create a function to return the maximum value inside a collection of values. <br>
+        This function has a For Loop, for the length of the arguments its given <br>
+        The conditional logic determines if the index of arguements is > max <br>
+        Then max should equal the value at that index, otherwise no action <br>
+        When loop has finished, return max (Which has been set to the highest value)  <br> <br>
+      <strong>
+        function findMax() { <br>
+          let max = 0 <br>
+          for (i = 0; i &lt; arguments.length; i++) { <br>
+            if (arguments[i] > max) { <br>
+              max = arguments[i]; <br>
+            } <br>
+          } <br>
+          return max;  <br>
+        }
+      </strong><br>
+      <br>
+      Then Call it with various numbers <br> <br>
+      <strong>x = findMax(1, 2, 30, 5, 700, 101, 22);</strong>
+     </p>
+      <br />
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+      <br />
+    </div>
+
   </body>
 </html>
