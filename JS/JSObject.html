@@ -163,8 +163,54 @@
 
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Strings</h2>
+      <p>Strings are used for storing and manipulating text data. <br>
+         can be either start and end with " or ', but not a mixture. <br> 
+         This is due to how "Quotes" are represented within Strings <br>
+         let xx = "He said "its wednesday" today" would only show "he said" <br>
+         and the rest would break the code; <br>
+         <strong>
+           let a = "This is Fine!";<br>
+           let b = 'This is Fine!';<br>
+           let c = "He said 'this is fine' to me";<br>
+           let d = 'He said "this is fine" to me';        <br>
+         </strong>
+        <br> TL;DR Start on Singles, Include Doubles <br> <br>
+        OR Escape special characters. <br>
+        <strong>let d = "he said \"this is fine\" as well - But looks Janky"; <br></strong>
+        <h3>Strings Are Objects; </h3> 
+        As such, Strings have Properties and Methods <br> <br>
+        <strong>let exampleString = "  I like mud. I want Mud. Bathe in MUD  "; <br></strong>
+        String Properties; <br>
+        length; - Returns the length of the string <br>
+        <strong>exampleString.length;<br></strong>
+        String Methods; <br>
+        indexOf() - Returns the first Index of the 1st Entry of the search term <br>
+        <strong>exampleString.indexOf("mud");</strong> <br>
+        lastIndexOf() - Returns the first Index of the  Last Entry of the search term <br>
+        <strong>exampleString.lastIndexOf("mud");</strong> <br>
+        charAt()  - Returns the character at a given index<br>
+        <strong>exampleString.charAt(10);</strong> <br>
+        match() - Searches for and Returns the match of a given value /value/gi (G for global | I for Case Sensitive)<br>
+        <strong>exampleString.match(/mud/gi);</strong> <br>
+        replace() - Replace first instrance of X within string, with Y Given value.<br>
+        <strong>exampleString.replace("mud", "greek yoghurt");</strong> <br>
+        search() - returns the first index of a particular search term <br>
+        <strong>exampleString.search("mud");</strong> <br>
+        slice() - Slices information out of a string, to create a new one with the results (startIndex, stopIndex) <br>
+        <strong>exampleString.slice(0,11);</strong> <br>
+        toLowerCase() - Transform Data to LowerCase<br>
+        <strong>exampleString.toLowerCase();<br></strong>
+        trim() - Trims any whitespace from the begining and ending of a string <br>
+        <strong>exampleString.trim();<br></strong>
+        toUpperCase() - Transform Data to UpperCase<br> 
+        <strong>exampleString.toUpperCase();<br></strong>
+         <br><br>
+         <strong>let x = "abc";  (Best Practice!) <br></strong>
+         let y = new String("abc"); <br>
+         x = String Literal | y = String Object <br> x == y = True BUT x === y = False! <br>
+         Both string literal and string objects gain access to string properties + Methods. <br> 
+        </p>
       <br />
     </div>
 
