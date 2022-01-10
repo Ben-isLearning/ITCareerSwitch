@@ -7,11 +7,88 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Object</h1>
+    <h1>Objects / Types</h1>
 
     <div>
       <h2>Object Syntax</h2>
       <p>object uses string values rather than values</p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Data Types</h2>
+      <p>
+        Numbers <br />
+        Strings <br />
+        Dates <br />
+        Objects <br />
+        <br />
+        JS is a loosely Typed language <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Number</h2>
+      <p>
+        Number is a universal type; <br />
+        rather than decimal, integer, large integer floating point etc... <br />
+        let a = 1; <br />
+        let b = 12.5; <br />
+        let c = 20.12341 <br />
+        All of these declarations are variables with Number type data.
+        <br />
+        <br />
+        <strong>let delta = "12.5";</strong> <br />
+        This declaration will produce a variable with String type data. <br />
+
+        <strong>let d = functionCreateNumber(delta);</strong> <br />
+        This declaration will use the d varible as an arguement to <br />
+        the functionCreateNumber to create a New variable with Number type data
+        <br />
+        <strong>(functionCreateNumber is uncoded, just an example)</strong>
+        <br />
+        <br />
+        If we are expecting number values to be returned from user input, <br />
+        we can use
+        <strong>conditional logic through if with the isNaN function</strong>
+        <br />
+        to double check the input is correct before continuing. <br />
+        <br />
+        <strong>let delta = "12.5"; <br /></strong>
+        <strong>let phoneNumber = "Sausage Rolls"</strong>
+        This declaration will produce a variable with String type data. <br />
+        *Assuming this is USER INPUT with incorrect format* <br />
+        <br />
+
+        <strong>
+          if (isNaN(delta)) {<br />
+          console.log("It's not a number");<br />
+          } <br />
+          <br />
+          if (isNaN(phoneNumber)) { <br />
+          console.log('It's not a number!'); <br />
+          } <br />
+          <br />
+        </strong>
+        This conditional logic will use the isNaN function to <br />
+        check whether a value is NaN or not <br />
+        Where JS is a loosely typed language, "12.5" can be either String or
+        Number. <br />
+        If (delta = "catfish") it certainly would have come up as NaN. <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+      <br />
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
       <br />
     </div>
 
