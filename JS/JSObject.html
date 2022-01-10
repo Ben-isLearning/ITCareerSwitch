@@ -70,6 +70,43 @@
     </div>
 
     <div>
+      <h2>Properties</h2>
+      <p> Properties are the most important part of an Object <br>
+        Properties are the parts that make up the whole  <br> 
+        Properties can be referred to, added, changed and deleted. <br>
+        via Dot Notation ~   Object.property<br>
+        Ex: <strong>person.firstName + "is " + person.age + " years old"; <br></strong>
+        <br>
+        Via Bracket Notation ~ Object["property"] <br>
+        Ex:<strong> person["firstName"] + "is " + person["age"] + " years old"; <br></strong>
+      
+      <h3>Looping Through Object Properties (For-In Object)</h3>
+      Declare our text variable (Something to be written to) and our object <br> <br>
+      <strong>
+        let text = ""; <br>
+        let thisObject = { <br>
+            alphaVariable:101,<br>
+            betaVariable:404,<br>
+            firstName:"Dolan" <br>
+        }; <br><br>
+     </strong>
+        Declare a for loop to look for the properties IN the object; <br>
+        <strong>
+          for (i in thisObject) { <br>
+          text += thisObject[i]; <br>
+          } <br>
+        </strong> <br>
+        The Loop will return "101404Dolan". <br>
+    
+        Add property:value; pair to an existing Object; <br>
+        <strong>thisObject.deltaVariable = 505;<br> </strong> <br>
+        Delete property:value; pair of an existing Object; <br>
+        <strong>delete thisObject.deltaVariable; </strong> <br>
+      </p>
+      <br />
+    </div>
+
+    <div>
       <h2>Data Types</h2>
       <p>
         Numbers <br />
