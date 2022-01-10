@@ -70,6 +70,29 @@
     </div>
 
     <div>
+      <h2>Prototypes</h2>
+      <p>The JS Inheritance Mechanism <br>
+        Prototype governs inheritance, for instance a constructor using input data <br>
+        to give 1st name, 2nd name and so on <br>
+        But using an inherant function as a prototype to ensure that function is passed <br>
+        down to all objects that it has created. <br>
+        object.prototype.property = .... <br> <br>
+
+        take our familyMember(first, last, age, relation) {...} example from earlier; <br>
+        Each input is different, however with prototype, all created objects can be given <br>
+        Inherited functionality... <br> <br>
+        <strong>
+          familyMember.prototype.name = function() { <br>
+          return this.firstName + " " + this.lastName; <br>
+          }; <br> 
+        </strong> <br>
+        From This; our "myFather" object gains the "name()" prototype function from inheritance <br>
+
+      </p>
+      <br />
+    </div>
+
+    <div>
       <h2>Properties</h2>
       <p> Properties are the most important part of an Object <br>
         Properties are the parts that make up the whole  <br> 
@@ -105,6 +128,23 @@
       </p>
       <br />
     </div>
+
+    <div>
+      <h2>Methods - Create + Call </h2>
+      <p>Object Methods are actions that can be performed on objects <br>
+      Methods are properties that contain a function definition. <br> 
+      Much like Math.random(); we used earlier. <br> <br>
+      Created by; <br>
+      <strong>function methodName(parameter, parameter2, ...) { <br>
+          Actions here <br> } <br></strong>
+      Then Accessed; <br>
+      <strong>objectName.methodName(argument, argument2, ...);<br></strong>
+      <br>
+      </p>
+      <br />
+    </div>
+ 
+
 
     <div>
       <h2>Data Types</h2>
