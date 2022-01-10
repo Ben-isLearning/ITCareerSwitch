@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <h1>Document Object Model (DOM)</h1>
+    <div>
+      <h2>DOM</h2>
+      <p id="demo">
+        JS Doesn't exist in a vacuum. JS operates alongside HTML web pages.<br />
+        Understanding the DOM is a nessaccary step of understanding JS. <br />
+        The D-O-M; <br />
+        Document - The webage its self <br />
+        Object - The objects that are created based on the HTML structrue <br />
+        Model - A consistent approach to the various objects <br />
+        <br /><strong>
+          In short ~ The DOM is a schematic of a web page, <br />
+          the objects avaliable, and the methods of accessing them. <br />
+        </strong>
+        <br />
+        The DOM defines; <br />
+        each different HTML Element as an Object <br />
+        The properties of all HTML elements <br />
+        The methods to access all HTML elements <br />
+        The events for all HTML elements <br />
+        (Responding to Clicks / Mousovers / Etc) <br />
+        <br />
+        DOM Properties are values that we can set or change <br />
+        (Ex; Changing the Content of an HTML element) <br />
+        Whereas <br />
+        DOM Methods are actions that we can take on HTML elements <br />
+        (Ex; Adding or Deleting an HTML element) <br />
+        <strong>
+          document.getElementByID(""); <br />
+          document.getElementsByClassName(""); <br />
+          console.log(variable.innerHTML); <br />
+        </strong>
+        (Havn't we heard this before? YES!) <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Accessing DOM elements</h2>
+      <p>
+        There are many ways of finding / accessing DOM elements <br />
+        If we want to modify the HTML elements, first we must find them! <br />
+        <br />
+        1st) Where is it? <br />
+        2nd) Is it Unique? Yes - ID! | No - Class <br />
+        <br />
+
+        <strong
+          >let myElement = doucment.getElementByID("abc"); <br /><br
+        /></strong>
+        Latches onto the HTML element with ID of "abc"; <br />
+        Can traverse to Children or Parents of Element <br />
+        Can change InnerHTML + Attributes <br />
+        <br />
+        <strong>4 Options of tracking down an HTML Element;</strong> <br />
+        document.getElementByID("") - (Single ) - By ID <br />
+        document.getElementsByTagName("") - (Multiple) - By Element Name | a /
+        img / etc <br />
+        document.getElementsByClassName("") - (Multiple) - By Class Name <br />
+        document.querySelectorAll("") - () - By CSS Selector |<br />
+      </p>
+
+      <br />
+    </div>
+
+    <div>
+      <h2>Changing DOM</h2>
+      <p></p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Creating DOM</h2>
+      <p></p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Responding to Events</h2>
+      <p></p>
+      <br />
+    </div>
+  </body>
+</html>
