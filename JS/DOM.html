@@ -51,30 +51,124 @@
         If we want to modify the HTML elements, first we must find them! <br />
         <br />
         1st) Where is it? <br />
-        2nd) Is it Unique? Yes - ID! | No - Class <br />
+        2nd) Is it Unique?  <br>
+          Yes - ID! <br>
+          No - Class! | Element Tag! | CSS Selector!  <br />
         <br />
-
-        <strong
-          >let myElement = doucment.getElementByID("abc"); <br /><br
-        /></strong>
-        Latches onto the HTML element with ID of "abc"; <br />
-        Can traverse to Children or Parents of Element <br />
-        Can change InnerHTML + Attributes <br />
-        <br />
-        <strong>4 Options of tracking down an HTML Element;</strong> <br />
+        <strong>4 Options of tracking down an HTML Element;</strong> <br /> <br>
         document.getElementByID("") - (Single ) - By ID <br />
         document.getElementsByTagName("") - (Multiple) - By Element Name | a /
         img / etc <br />
         document.getElementsByClassName("") - (Multiple) - By Class Name <br />
-        document.querySelectorAll("") - () - By CSS Selector |<br />
-      </p>
+        document.querySelectorAll("") - (Single/Multiple) - By CSS Selector |<br /> <br>
+      
+        <strong>
+        let myElement = document.getElementByID("abc"); <br /></strong>
+        Declares Varible that <br>
+        Latches onto the HTML element with ID of "abc"; <br /> 
+        <br />
+        <strong> 
+          let myTagName = document.getElementsByTagName("a"); <br>
+        </strong>
+          Declares a variable that <br>
+          stores data from all the HTML elements with the "a" Tag <br> 
+          <strong>
+          let showFirstLink = myTagName[0].getAttribute("href"); <br>
+        </strong>
+          Declares a variable that <br>
+          selects index[0] of the previous variable,<br>
+          then stores data from the attribute containing "href" <br> 
+          <strong>console.log(showFirstLink);</strong> <br>
+          Shows the data yeilded from the two steps. <br> <br>
+          <strong> let myVariableByClass = document.getElementsbyClassName("Heading"); <br>
+          </strong>
+          Declares a variable that <br>
+          Stores data from all of the elements with the Class Name "Heading" <br> <br>
+
+          <strong>let myVariableByCSS = document.querySelectorAll("div.opener")</strong> <br>
+          Declare a variable that <br>
+          Stores data from all the DIV elements with the CSS Selector of "opener" <br> <br>
+           
+
+        <h3 id="mainCaption"> This is a main Caption </h3>
+      
+        let mainTitle = document.getElementById("mainCaption"); <br />
+        Show elements Type - in Numeric value 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType">Guide</a> <br />
+        <strong>mainTitle.nodeType; <br /></strong>
+        Show elements innerHTML - <br />
+        <strong>mainTitle.innerHTML; <br /></strong>
+        Show a list with the amount of Child elements within the targetd element has <br />
+        <strong>mainTitle.childNodes <br /> </strong>
+        <br><br>
+        Collate List of Links on a webpage (a tags) <br>
+
+        <strong>
+          let myLinks = document.getElementsByTagName("a"); <br>
+          console.log(myLinks); <br>
+        </strong>
+        <br>
+        Change the InnerHTML of an element selected by ID<br>
+          <strong>let changedText = document.getElementByID("mainCaption").innerHTML = <br> "This value has changed "; <br></strong>
+          Or <br>
+          <strong>mainTitle.innerHTML = "This value has changed ";</strong> <br> <br>
+
+        Once the element has been accessed, individual attributes can be accessed using the getAttribute() method. <br>
+        getAttribute() allows us to access attributes of any elements on the page. <br><br>
+        <strong>
+          myElement.getAttribute("align"); <br> Or <br>
+          mainTitle.getAttribute("color"); <br> <br>
+        </strong>
+
+          Proof of concept: <br> 
+          1) myLinks Gathers information on all A tags <br>
+          2) firstLink Gathers information of index 0 of myLinks, <br>
+          particularly the value of the Attribute containing "href" <br> 
+          3) Displays findings <br> <br>
+          <strong> 
+            let myLinks = document.getElementsByTagName("a"); <br>
+            let firstLink = myLinks[0].getAttribute("href"); <br>
+            console.log(firstLink); <br>
+          </strong>
+          <br><br>
+          Or use same "getAttribute" method to find the source of a particular image. <br>
+          <strong>document.getElementById("dogPhoto").getAttribute("src"); <br></strong>
+       </p>
 
       <br />
-    </div>
 
     <div>
       <h2>Changing DOM</h2>
-      <p></p>
+      <p> We are able to modify elements entirely, or in part by via attributes.  <br> 
+        Changing uses the set method; to give values. <br>
+         Rather than the get method, which retreives values.  <br> 
+        Ex; <br>
+      document.<strong>get</strong>ElementById("openingParagraph").innerHTML; <br>
+      Will display the current value of the innerHTML of "openingParagraph" <br><br>
+      Whereas setting... <br>
+      document.getElementById("openingParagraph").innerHTML = "Text Changed Successfully" <br> <br>
+
+      Ex; <br>
+      document.getElementById("dogPhoto").<strong>getAttribte</strong>("align"); <br>
+      Will return the value of the align property of the particular element <br> <br>
+      Whereas set... <br>
+      document.getElementById("dogPhoto").<strong>setAttribute</strong>("align", "center"); <br>
+      Will set the value of the align property as given. <br>
+      This method requires ("Name", "Value").  <br> 
+      This method be used to change Image sources after a given period of time, <br>
+      effectively creating a slideshow. <br> <br>  
+
+      CSS properties can also be amended with this method,  <br>
+      <strong>However it is bad practice to do so.</strong> Static styling should be handled externally within the .css <br>
+      But we are able to program responsiveness in this manner. <br>
+      Font-family: becomes fontFamily, etc, etc <br>
+      Ex; <br>
+      doucment.getElementById("p2").style.color = "blue"; <br>
+      This can also be acheived by <br>
+      setAttribute("style", "color:blue"); <br> <br>
+      <strong>This example is merely an abstract proof of concept. </strong>
+
+   </p>
       <br />
     </div>
 
