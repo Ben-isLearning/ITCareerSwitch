@@ -10,8 +10,62 @@
     <h1>Objects / Types</h1>
 
     <div>
-      <h2>Object Syntax</h2>
-      <p>object uses string values rather than values</p>
+      <h2>Objects as a whole</h2>
+      <p>Simply put, {Objects} are simply variables that contain more variables, <br>
+         structured from Name:Value pairs, refered to as Properties. <br>
+         And Functions (Inside the object), refered to as Methods.  <br>  
+         Object in Javascript are everywhere! Understand Objects and you understand JS! <br>
+      Objects have Properties (Attriubutes) and Methods (Actions) <br> 
+      Consider a real life object, a Pizza <br><br>
+      All {Pizza}'s have Properties (Attributes);  <br>
+      Toppings <br>
+      Crust <br>
+      Size <br>
+      Etc <br>  <br> 
+
+      They also have Methods(Actions) associated with them too <br>
+      Freeze <br>
+      Cook <br>
+      Prepare <br>    
+      AddMoreToppings <br> <br>
+
+      Everything is an Object; <br>
+      Booleans, Numbers, Strings (Primitives Can be Objects)<br>
+      Whereas Dates, Math, Regular Expressions, Arrays, Functions Objects Are ALWAYS objects <br>
+      <br>
+      <h3>Creating an Object;</h3>
+      Object literal ~ {} <br> <br>
+      <strong>
+        let thisObject = { <br>
+            alphaVariable:101,<br>
+            betaVariable:404,<br>
+            firstName:"Dolan" <br>
+        }; <br><br>
+      </strong>
+      2) Keyword new ~ (Bad Practice - Takes So much longer) <br> <br>
+       <strong>
+         let thisObject = new Object(); <br>
+         thisObject.alphaVariable:101,<br>
+         thisObject.betaVariable:404,<br>
+         thisObject.firstName:"Dolan" <br> <br>
+       </strong>
+
+      3) Object Contructor ~ (Lay out Schematics for an object "type" <br>
+       Then input data to Create various similar Objects) <br><br>
+      <strong>
+        function familyMember(first, last, age, relation) {<br>
+          this.firstName = first;<br>
+          this.lastName = last; <br>
+          this.age = age; <br>
+          this.relation = relation; <br>
+        } <br> <br>
+      </strong> 
+      Once the shematics are laid out; Input values for each object; <br>
+        <strong>
+          let myFather = new familyMember("Rick", "James", 50, "Father"); <br>
+          let myMother = new familyMember("Sally", "Rudolph", 21, "Mother"); <br>
+        </strong>
+      </p>
       <br />
     </div>
 
