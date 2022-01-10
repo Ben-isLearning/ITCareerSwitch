@@ -76,21 +76,91 @@
         Where JS is a loosely typed language, "12.5" can be either String or
         Number. <br />
         If (delta = "catfish") it certainly would have come up as NaN. <br />
+
+        <h3>Numbers Are Objects; </h3>
+        As such they have distinct Properties and Methods; <br />
+        Number Properties; (Descriptions / Attributes) <br />
+        <strong>
+          MAX_VALUE <br />
+          MIN_VALUE <br />
+          NaN <br />
+        </strong>
+        <br />
+        Number Methods; (Actions / Executables) <br />
+        <strong>
+          toString(); <br />
+          toExponential(); <br />
+          toFixed(); <br />
+        </strong>
+        <br />
+        <strong>
+          let x = 404; <br />
+          x.toString(); <br />
+        </strong>
+        or <br />
+        <strong>(404).toString();</strong> <br />
+        or <br />
+        <strong>(100 + 304).toString();<br /></strong>
+        <br />
+        Simply changes 404 to '404'; <br /><br />
       </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Math Object (Math.xxx)</h2>
+      <p>
+        The Math Object operates much like a calculator inside JS <br />
+        The object holds a multitude of properties and functions <br />
+        Math.function(variable, [variables]); <br />
+        Ex; <br />
+        <strong>
+          let a = 200.6; <br />
+          let b = Math.round(a); <br />
+          let c = Math.floor(a); <br />
+          let d = Math.ceil(a); <br />
+        </strong>
+        B) This rounds our variable to the nearest whole number (201) <br />
+        C) This rounds our variable UP, no matter what (201) <br />
+        D) This rounds our variable Down, no matter what (200) <br />
+        <br />
+        <br />
+        <strong>
+          let x = 100; <br />
+          let y = 200; <br />
+          let z = 300; <br />
+          let biggestValue = Math.max (x, y, z); <br />
+          let smallestValue = Math.min (x, y, z); <br />
+        </strong>
+        max finds the largest variable, whereas min finds the smallest. (300 /
+        100) <br />
+        <br />
+        <strong>Math.random(); </strong><br />
+        This returns a random number between 0 - 1; <br />
+        Really usefull for RNG functions like rolling dice. <br />
+        <br />
+        <strong>Math.PI; <br /></strong>
+        This returns the value of Pi <br />
+        <br />
+        <strong> Math.SQRTx; <br /> </strong>
+        This returns the Square Root of x <br /><br />
+
+        Floating Point Intiger pitfalls; <br />
+        <strong>
+          let x = 0.2 + 0.1; <br />
+          Will return x = 0.3000000000000000000000004 <br />
+        </strong>
+        <br />
+        <strong>
+          Whereas let y = (0.2 * 10 + 0.1 * 10) / 10; <br />
+          Will return y = 0.3 <br />
+        </strong>
+        <br />
+        This is Janky AF, but its a work-around. <br />
+      </p>
       <br />
     </div>
 
-    <div>
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
 
     <div>
       <h2></h2>
