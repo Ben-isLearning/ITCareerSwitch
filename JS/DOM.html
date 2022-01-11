@@ -134,8 +134,8 @@
           Or use same "getAttribute" method to find the source of a particular image. <br>
           <strong>document.getElementById("dogPhoto").getAttribute("src"); <br></strong>
        </p>
-
       <br />
+    </div>  
 
     <div>
       <h2>Changing DOM</h2>
@@ -167,7 +167,7 @@
       This can also be acheived by <br>
       setAttribute("style", "color:blue"); <br> <br>
       <strong>This example is merely an abstract proof of concept. </strong>
-   </p>
+      </p>
       <br />
     </div>
 
@@ -232,8 +232,162 @@
 
     <div>
       <h2>Responding to Events</h2>
-      <p>JS </p>
-      <br />
+      <p>
+        JS is meant to Control the behaviour of the webpage and its interactivity. <br>
+        Our code should be able to respond to actions that are taken on the page! <br>
+        This is acheived through Events and Event Listeners... <br>
+        We do not cause Events; Scrolling, Resizing, Hovering, Clicking, Changing Focus, etc. <br>
+        We chose what events we want to listen for, and react to. <br>
+        And we chose an appropreate reaction for each specified event. <br> <br>
+
+        There are 3 ways that we can respond to events; <br>
+        1) Write JS code directly into HTML  (Bad Practice - Don't Mix Languages) <br>
+        2) Specify element and event we want to handle, then write a function (Best Practice!) <br>
+        3) use the addEventListener() function (Best Practice!)  <br> <br>
+
+        1) Mix HTML + JS  (Bad Practice); <br>
+        <strong>&lt;button onclick='alert("Hello world!");'>Do Something Crazy&lt;/button> <br></strong>
+        <button onclick='alert("Hello world!");'>Do Something Crazy</button> <br><br>
+        Ex 1: Below paragraph innerHTML text will change when clicked <br>
+        <strong>&lt;p onclick="this.innerHTML='You Clicked Me!'">Hello World!&lt;/p> <br> </strong>
+        <p onclick="this.innerHTML='You Clicked Me!'">Hello World!</p> <br>
+
+        2) Identify the element we want to act and the event that we want to respond to <br>
+        element is referenced using a variable. (Variable linked to DOM prior) <br>
+        event is chosen from the list of possiblities <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank"> Reference</a> <br>
+        anonymous function is created to perform the action <br> 
+        <strong>
+          myElement.onclick = function() { <br>
+            **Code Goes Here** <br>
+          } <br> <br>
+        </strong>
+        Ex 2: below paragraph will alert when clicked. <br>
+        <strong>document.getElementById("sauce").onclick = function () { alert("Boo!!!!")};</strong>
+        <p id="sauce">Click me and Look up!</p>
+        <script>
+        document.getElementById("sauce").onclick = function(){alert("Boo!!!!");};
+        </script>
+
+        3) Utilise the addEventListener() Method. <br>
+        EventListeners listen for a particular event, then responds <br>
+        parameters; Event we are responding to (Without "on" | onclick >> click ) <br>
+        The function that we want to call <br>
+        Options - Optional (Gives Intricate functionality - False is fine )  <br>
+        <strong>document.addEventListner('click', myFunction, false); <br> <br></strong>
+        Ex 3: The below paragraph will alert when clicked. <br>
+        <p id="rocks">This paragraph Rocks! ~ Click and Look UP!</p>
+        <strong id="ok">document.getElementById("rocks").addEventListener("click", function() {alert("Turn To dust!!!!");});</strong>
+        <br> +++ <br><strong>document.getElementById("rocks").addEventListener("mouseover", function() {alert("Cheeky Peeky!");});</strong>
+        <script>
+          document.getElementById("rocks").addEventListener("click", function() {alert("Turn To dust!!!!");});
+          document.getElementById("ok").addEventListener("mouseover", function() {console.log("Cheeky Peeky!");});
+        </script>
+         <br> 
+        <br>
+
+
+        
+        4) Voice of experience; Don't listen, program reactivity <br>
+        Create the functionality in the external JS, then invoke it <br> 
+        in the HTML when a specific event occurs. ~ Effectively Bypassing the DOM. <br>
+        element eventType="invokeThisFunction()" <br>
+        <strong>&lt;button onclick="myFunction()"> xxx &lt;/button> </strong>
+        <br />
+        <br>
+        Ex 4: below paragraph will alert when clicked. <br>
+        <p id="experience" onclick="functionAlpha()">Click me and Look up!</p>
+        <strong>document.getElementById("sauce").onclick = function () { alert("Boo!!!!")};</strong>
+        <script>
+          function functionAlpha() {
+            alert("The voice of experience");
+          }
+        </script>
+        <br><br>
+      </p>
     </div>
+      
+    <div>
+        <h2>'Responding' to Events - In due time!</h2>
+        <p>There are times when we want behaviour on a page to be controlled automatically by time <br>
+        for instance, after 15s a subscription popup occurs offering 10% off the order <br>
+        While these aren't technically events, they operate very similarly. <br>
+        Two functions will provide time-based responsiveness <br>
+          setTimeout() and setInterval() <br>
+          Both of these functions take (functionToBePerformed, Time in Milliseconds) <br> <br>
+          Ex; <br> 
+          Set timer... for Function to be performed ONCE, IN... 5000 ms! (5s)<br>
+          <strong>function myFunction() { <br>
+          alert("This is a message") <br>
+          } <br>
+          setTimeout(myFunction, 5000); <br> <br></strong>
+          Set timer... for function to be performed EVERY... 5000 ms! (5s) <br>
+          <strong>
+          function anotherFunction() { <br>
+          alert ("See you in 5 seconds!") <br>
+          } <br>
+          setInverval(anotherFunction, 5000); <br> <br> </strong>
+          Ex 2: Looping Through Images; <br>
+          Establish Groundwork; <br>
+          Declare imageVariable (Attatch to element in the DOM) <br>
+          <strong>let imageVariable = document.getElementById("flag"); <br></strong>
+          Declare arrayOfImages (library) <br>
+          <strong>let arrayOfImages = ["image/france.png", "image/germany.png", "images/poland.png", "images/united-kingdom.png"]; <br></strong>
+          Declare indexVariable  (To be worked on later) <br>
+          <strong>let indexVariable = 0; </strong> <br>
+          Create Function to Set SOURCE attribute of imageVariabe = arrayOfImages particularly[indexVariable] <br>
+          Then use the ++ operator to loop through the arrayOfImages. <br>
+          Then Include Conditional Logic (if) to see if index >= Length of array, then repeat the loop. <br>
+          <strong>
+            function changeImage() {<br>
+              imageVariable.setAttribute("src", arrayOfImages[indexVariable]); <br>
+              imageIndex++; <br>
+              if (indexVariable >= arrayOfImages.length) { <br>
+                imageIndex = 0; <br>
+              } <br>
+            } <br>
+          </strong> <br>
+          Use setInterval method to use the changeImage function along with a specified time <br>
+          <strong>setInterval(changeImage, 5000);</strong> <br><br>
+          Smash it all together and we get... <br>    
+          <img id="flag" src="image/france.png">
+          <script>
+            let imageVariable = document.getElementById("flag");
+            
+            let arrayOfImages = ["image/france.png", "image/germany.png", "image/poland.png", "image/united-kingdom.png"];
+
+            let indexVariable = 0;
+
+            function changeImage() {
+            imageVariable.setAttribute("src", arrayOfImages[indexVariable]);
+            indexVariable++;
+              if (indexVariable >= arrayOfImages.length) {
+              indexVariable = 0;
+               }
+            }
+
+            setInterval(changeImage, 5000); 
+
+          </script>
+    
+      </p>
+        <br />
+    </div>
+
+      <div>
+        <h2>Event Example; (With all code smashed into HTML - Bad practice)</h2>
+        <div style="height:150px; width:150px; border: 5px solid blue;" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
+        <script>
+          function mOver(object) {
+            object.innerHTML = "Thank You";
+          }
+
+          function mOut(object) {
+            object.innerHTML = "Mouse Over Me"
+          }
+        </script>
+        <br />
+      </div>
+
   </body>
 </html>
+ 
