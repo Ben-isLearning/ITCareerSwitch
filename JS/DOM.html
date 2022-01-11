@@ -167,20 +167,72 @@
       This can also be acheived by <br>
       setAttribute("style", "color:blue"); <br> <br>
       <strong>This example is merely an abstract proof of concept. </strong>
-
    </p>
       <br />
     </div>
 
     <div>
-      <h2>Creating DOM</h2>
-      <p></p>
+      <h2>Creating DOM Elements</h2>
+      <p>Adding Information into the page; <br>
+        This can be acheived by innerHTML, but many things can go wrong. <br> <br>
+        We are able to create elements within the DOM, and then add a text node to those elements. <br>
+        (Rather than modify A to B, just install a fresh new B!) <br><br>
+        Adding to the DOM includes 2 steps; <br>
+        1) Creating the Element <br>
+        2) Associate Element with the DOM (Add it to the right place) <br>
+        3) Add Content <br> <br>
+        Ex: <br>
+        ** &lt;ul id="myList"> --- Context **<br> <br>
+        declare variable - document.<strong>createElement</strong>("specificTypeOfElement"); <br>
+        <strong>
+          let newListItem= document.createElement("li"); <br> <br>
+        </strong>
+          Link the new variable to the DOM, specifically to become a child of the selected element <br>
+          <strong>myList.appendchild(newListItem);<br></strong> <br>
+        Create new Text Node; Input new Text, then assign the text node to be a child of myElement <br>
+        <strong>
+          let myText = document.createTextNode("Iam a new list Item"); <br>
+        </strong><br>
+        Link the new variable to the DOM, specifically to become the child of the selected element <br>
+        <strong>newElement.appendchild(myText); <br></strong> <br>
+
+        <strong>This appendChild method adds another child to the family, AS THE LAST SIBLING</strong><br> <br>
+        ul of 3 li (myList) <br>
+        (Create 4th Li with let xxx = document.createElement("li"); ) <br>
+        (Assign new Li to ul myList.appendChild(xxx);) <br>
+        (Assign new text to the new xxx with let yyy = document.createTextNode("I am Text");) <br>
+        ul of 4 li (myList) <br> 
+        Another Variant; <br>
+        Delare - let newElement = document.createElement(""")<br>
+        Declare - let newNode = document.createTextNode("") <br>
+        Assign Node to Element - newElement.appendChild("newNode"); <br>
+        Establish handle to DOM - document.getElementById("existingList"); <br>
+        Assign Element to DOM - existingList.appendChild("newElement"); <br> <br>
+
+        Ex: appendChild (add one at the back)<br>
+        <strong>
+          let newLi = document.createElement("li"); <br>
+          let newNode = document.createTextNode("New list item at the end of the list") <br>
+          newLi.appendChild(newNode); <br>
+          document.getElementById("existingList"); <br>
+          existingList.appendChild("newLi"); <br> <br>
+        </strong> 
+
+        Another Method: insertBefore (Add as 1st child, before Others) <br>
+        <strong>
+          let newNewLi = document.createElement("li"); <br>
+          let newNewNode = document.createTextNode("New list item at the beginning") <br>
+          newnewLi.appendChild(newnewNode); <br>
+          document.getElementById("existingList"); <br>
+          existingList.insertBefore("newNewLi"); <br><br>
+        </strong>
+      </p>
       <br />
     </div>
 
     <div>
       <h2>Responding to Events</h2>
-      <p></p>
+      <p>JS </p>
       <br />
     </div>
   </body>
