@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <script src="jquery-360.js"></script>
+  </head>
+  <body>
+    <h1>Libraries</h1>
+    <div>
+      <p>
+        <strong
+          >JavaScript Libraries are collections of JavaScript files /
+          Functions</strong
+        >
+        <br />
+        The libraries provide functionality and reference material <br />
+        Why create something that already exists? <br />
+        Its worth creating a library of snippets as a portfolio of sorts <br />
+        ...A bag of 'tricks' you can reach into down the line... <br />
+        But preconfigured libraries are readily avaliable <br /><br />
+        For instance the library 'JQuery' is similar to JavaScript, but has its
+        own flavour <br />
+        Most Libraries are open source and freely avaliable. <br />
+        Why write a book (a function), when you can just check one out of the
+        library? <br />
+        JQuery / React / Angular / Etc<br />
+        <br />
+
+        JQuery uses CSS selectors to change DOM objects on the page. <br />
+        also provides a companion IU framework and many other plug-ins
+        <br /><br />
+
+        Libraries need to be scripted to the HTML by a &lt;script> tag <br />
+        with a source attribute. <br />
+        The Library can be stored locally, or <br />
+        it can be stored in the cloud
+        <br />
+        and obtained through a Content Delivery Network <br />
+        (Like obtaining Google fonts) <br />
+        <br />
+        Library is a library, no matter where it is saved
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>JQuery 101</h2>
+      <p>
+        Designed to be a write less - do more library. <br />
+        Contains many common tasks that require many lines of code, <br />
+        Methods of which, can be invoked with a single line <br />
+        <br />
+        Simplifies; <br />
+        DOM Manipulation, <br />
+        CSS Manipulation, <br />
+        HTML Event methods <br />
+        Effects + Animations <br />
+        <br />
+
+        Download JQuery from <br />
+        <a href="https://jquery.com/download/">jquery.com/download/</a>
+
+        Install jquery-x.x.x.js in the Folder Directory <br />
+
+        Link the HTML to the js via a Script tag. <br />
+        In this instance it would be &lt;script src="jquery-360.js">&lt;/script>
+        <br />
+        <br />
+        Or <br />
+        visiting <a href="https://code.jquery.com">code.jquery.com</a> <br />
+        Then selecting the version of code you want <br />
+        then copying the "Code Intergration" into the head. <br />
+        Ex: <br />
+        &lt;script src="https://code.jquery.com/jquery-3.6.0.js" <br />
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" <br />
+        crossorigin="anonymous">&lt;/script> <br />
+        <br />
+
+        General Syntax; <br />
+        for selecting HTML elements, then performing Actions
+        <br />
+        <br />
+        <strong>$(selector).action() <br /></strong>
+        <br />
+        <strong>$(document).ready() <br /><br /></strong>
+        Select Current element, Perform action <br />
+        <strong>$(this).hide()</strong> <br />
+        <br />
+        Select all "p" elements, Perform action <br />
+        <strong>$("p").hide()</strong> <br />
+        <br />
+        Select all elements with Class="test", Perform action <br />
+        <strong>$(.test).hide()</strong> <br />
+        <br />
+        select element with Id="test", perform action <br />
+        <strong>$(#test).hide()</strong> <br />
+        <br />
+
+        <h4>Common Issue; Scripts Running before page is loaded</h4> 
+        effectively preventing the scripts from accessing the HTML elements on
+        the page. <br /> <br>
+        jQuery overcomes this with the ready() function, that waits for all HTML elements to load <br>
+        before executing any code. <br> <br>
+
+        Essentially, just place the code inside the ready() function. <br>
+        The Below code will wait until the webpage has loaded to perform the Alert <br><br> 
+
+        <strong>
+          $(document).ready(function() { <br>
+            alert {"Hello World"}; <br>
+          }); <br>
+        </strong> 
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>JavaScript vs jQuery</h2>
+      <strong>
+        <p>function myFunction () { <br>
+          let object = document.getElementById("alpha"); <br>
+          object.innerHTML = "Hello jQuery"; <br>
+        } <br> <br>
+      </strong>
+      against... <br> <br>
+        <strong>
+          function myFunction() { <br>
+          $("#alpha").html("Hello jQuery"); <br>
+          } <br> <br>
+        </strong>
+      And to ensure it doesn't Invoke before DOM is finished... <br><br>
+      <strong>$(document).ready(myFunction);</strong>
+      jQuery is much more efficient! 
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Chaining ~  one().after().the().other();</h2>
+    
+        <p>  The Below function will target the element with Id="socks" <br>
+          will change the attribute "style" to "color:red" <br>
+          will change the html to "hello jQuery" <br><br>
+        <strong>
+        function myFunction() { <br>
+        $(#"socks").attr("style", "color:red").html("hello jQuery")  <br>
+        } <br> <br>
+        
+        $(document).ready(myFunction); <br>
+      </strong>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2></h2>
+      <p></p>
+      <br />
+    </div>
+  </body>
+</html>
