@@ -80,24 +80,32 @@
         <br />
 
         General Syntax; <br />
-        for selecting HTML elements, then performing Actions
+        Uses CSS Selectors to select HTML elements, then performing Actions
         <br />
         <br />
-        <strong>$(selector).action() <br /></strong>
+        <strong>$(selector).action(); <br /></strong>
         <br />
-        <strong>$(document).ready() <br /><br /></strong>
+        <strong>$(document).ready(); <br /><br /></strong>
         Select Current element, Perform action <br />
-        <strong>$(this).hide()</strong> <br />
+        <strong>$(this).hide();</strong> <br />
         <br />
         Select all "p" elements, Perform action <br />
-        <strong>$("p").hide()</strong> <br />
+        <strong>$("p").hide();</strong> <br />
         <br />
         Select all elements with Class="test", Perform action <br />
-        <strong>$(.test).hide()</strong> <br />
+        <strong>$(.test).hide();</strong> <br />
         <br />
         select element with Id="test", perform action <br />
-        <strong>$(#test).hide()</strong> <br />
+        <strong>$(#test).hide();</strong> <br />
         <br />
+        Select EVERYTHING, perform action <br>
+        <strong>$(*).hide();</strong> <br><br>
+        Select Current Element, perform action <br>
+        <strong>$(this).hide();</strong> <br><br>
+        Select P elements with Class "intro" <br>
+        <strong>$(p.intro).hide();</strong> <br> <br>
+        Select 1st P element <br>
+        <strong>$(p:first).hide();</strong><br><br>
 
         <h4>Common Issue; Scripts Running before page is loaded</h4> 
         effectively preventing the scripts from accessing the HTML elements on
@@ -156,8 +164,94 @@
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>jQuery Methods </h2>
+      <p>Jquery has powerful methods for changing and manipulating HTML content. <br>
+      (Both content and styles) <br>
+      Various DOM methods exist within jQuery... <br> <br>
+      <strong>Primary Methods:</strong> <br>
+      text() - sets or returns text content of the selected element <br>
+      html() - sets or returns all content of the selected element (including HTML markup) <br>
+      val() - sets or returns values in form fields <br>
+      <br>
+      Ex 1 + 2: text() + html()<br>
+      The below codeblock has 2 functions, nested inside of a 3rd ready function <br>
+      The .text() shows the Text <br>
+      the .html() shows all of the content including the html <br>
+      <strong> 
+        <br>
+        $(document).ready(function() { <br><br>
+
+          $("#btn1").click(function() {<br>
+            alert("Text: " + $("#test").TEXT());<br>
+          });<br><br>
+      
+          $("#btn2").click(function() {<br>
+            alert("HTML: " + $("#test").HTML());<br>
+          }); <br>
+          });<br><br>
+      </strong>
+    <script>
+    $(document).ready(function() { 
+
+    $("#btn1").click(function() {
+      alert("Text: " + $("#test").text());
+    });
+
+    $("#btn2").click(function() {
+      alert("HTML: " + $("#test").html());
+    }); 
+    });
+    </script>
+     
+        <p id="test"> <strong>this is some text</strong></p>
+        <button id="btn1">Show Text</button> <br><br>
+        <button id="btn2">Show HTML</button><br><br>
+
+        Ex 3: attr() <br>
+        The below codeblock has 1 function, nested inside of a 2nd ready function. <br>
+        the attr() method shows the contents of a particular attribute within <br>
+        a selected element        <br> <br>
+        <strong>
+          $(document). ready(function() { <br>
+            $("#google).click(function() {<br>
+              alert($("google").attr("href"));<br>
+            });<br>
+          });<br>
+        </strong>
+        <script>
+        $(document).ready(function() { 
+            $("#google").click(function() {
+                alert($("#link").attr("href"));
+                });
+          });
+        </script>
+
+        <p><a id="link" href="https//www.google.co.uk">This is a Link</a></p>
+        <button id="google">Show the href!</button> <br><br>
+        Ex 4: val() <br>
+        The below code has 1 function, nested inside of a 2nd ready function. <br>
+        On click, the id="btn5" button will change/override the Value "val()" <br>
+        of the id="test123" element <br>
+        <br>
+
+        <strong>
+          $(document).ready(function() { <br>
+            $("#btn5").click(function() { <br>
+              $("#test123").val("Awesome Sauce"); <br>
+            });<br>
+          });<br>
+        </strong>
+
+        <p> Input field: <input type="text" id="test123" value="BBQ Sauce"></p>
+        <button id="btn5">What Sauce?</button>
+        <script>
+          $(document).ready(function() { 
+            $("#btn5").click(function() {
+              $("#test123").val("Awesome Sauce"); 
+            });
+          });
+        </script>
+    </p>
       <br />
     </div>
   </body>
