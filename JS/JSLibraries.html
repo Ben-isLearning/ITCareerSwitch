@@ -258,12 +258,13 @@
     <div>
       <h2>Additional Methods:</h2>
       <p> Creating and removing HTML content via jQuery methods <br><br>
-      append() - Add something after a prior element<br>
-      prepend()  - Add something before a prior element<br>
+      append() - Add something as Last Child of  element<br>
+      prepend()  - Add something as 1st Child of element<br>
+      remove()  - Remove an element from the page  <br>
+      animate() -   <br>
       after() <br>
-      before() <br>
-      remove() <br> <br>
-
+      before() <br> <br>
+      
       Ex 1: append() <br>
       <p id="sausage">Sausage Sausage Sausage Sausage</p> 
       <button onclick="appendText()">Add some text</button> <br><br>
@@ -291,11 +292,93 @@
         $("#sausage").append(text, textCreate, textGenerate);
         }
       </script>
+      <br>
+      Ex 2; remove() <br>
+      This remove button will remove the Bacon Text the prior example. <br>
+      <p id="bacon">Bacon Bacon Bacon Bacon Bacon </p> 
+      <p id="bacon">Bacon Bacon Bacon Bacon Bacon </p> 
+      <p id="bacon">Bacon Bacon Bacon Bacon Bacon </p> 
+      <button id="buttonOne">Remove!</button> <br><br>
+      <strong>
+        $(document).ready(function() { <br>
+          $("#buttonOne").click(function() {  <br>
+            $("#bacon").remove(); <br>
+          }); <br>
+        }); <br>
+      </strong>
+
+      <script>
+        $(document).ready(function() {
+        $("#buttonOne").click(function() {
+        $("#bacon").remove();
+        });
+        });
+      </script>
+
+      <br><br>
+
+      Ex 3; prepend() <br>
+      <p id="sausageTwo">Sausage Sausage Sausage Sausage</p> 
+      This button will add text before the "SausageTwo" paragraph.  <br>
+      <button onclick="prependText()" id="buttonTwo">Add Text!</button> <br> <br>
+      <strong>
+        function prependText() { <br>
+          let text = "&lt;p> This is a body of text &lt;p>" <br>
+          $("#sausageTwo").prepend(text); <br>
+          }; <br>
+      </strong>
+      <script>
+        function prependText() { let text = "<p> This is a body of text <p>"
+        $("#sausageTwo").prepend(text);
+        };
+      </script>
+      <br><br>
+      Ex 4; animate() <br>
+      This buttons will animate the red Box. <br><br>
+        <button id="moveIt">Animate it!</button> <br> <br>
+        <button id="moveBack">Animate Back!</button> <br> <br>
+       <div id="moveMe" style="background:red;height:100px;width:100px;position:absolute;"></div> <br> 
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <script>
+        $(document).ready(function() {
+        $("#moveIt").click(function() {
+        $("#moveMe").animate({left: "250px"})
+        });
+        });
+
+        $(document).ready(function() {
+        $("#moveBack").click(function() {
+        $("#moveMe").animate({left: "0px"})
+        });
+        });
+      </script>
+      <br><br>
+      Gubbins of Moving target Div 250px away from left <br>
+      <strong>
+        $(document).ready(function() { <br>
+          $(#moveIt).click(function() { <br>
+            $("#moveMe").animate({left: "250px"})  <br>
+          }); <br>
+        }); <br> <br>
+      </strong>
+      Gubbins of Moving target Div 0px away from left <br>
+      <strong>
+        $(document).ready(function() { <br>
+          $(#moveBack).click(function() { <br>
+            $("#moveMe").animate({left: "0px"})  <br>
+          }); <br>
+        }); <br>
+      </strong>
+
+
+
       </p>
       <br />
     </div>
-
-    
 
   </body>
 </html>
