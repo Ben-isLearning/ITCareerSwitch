@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <h1>HTML Tables</h1>
+
+    <h2>Tables consist of;</h2>
+    <p>
+      &lt;table> - To define the table <br />
+      &lt;th> - To define a header cell in the table (Table Header) <br />
+      &lt;tr> - To define a row in a table (Table Row)<br />
+      &lt;td> - To define a cell in a table (Table Data) <br />
+      &lt;caption> - To define a table caption <br />
+      &lt;colgroup> - specify a group of one or more columns <br />
+      &lt;col> - specify column properties within a colgroup element <br />
+      &lt;thead> - groups the header content in a table <br />
+      &lt;tbody> - groups the body content in a table <br />
+      &lt;tfoot> - groups the footer content in a table <br />
+    </p>
+
+    <h2>Tables;</h2>
+    <table style="border: 1px solid black; width: 400px">
+      <caption>
+        This is Actually a Table
+      </caption>
+      <tr>
+        <td>Ta daaa</td>
+      </tr>
+    </table>
+    <br />
+    <table style="border: 1px solid black; width: 400px">
+      <caption>
+        This is more like it...
+      </caption>
+
+      <thead>
+        <tr>
+          <th>Is Climate Change an issue?</th>
+          <th>Does world Peace Matter?</th>
+          <th>Do you eat babies?</th>
+          <th>Should we shoot you?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Yes!</td>
+          <td>It'd be nice</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Yes, Yum!</td>
+          <td>Yes!</td>
+        </tr>
+        <tr>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Please Hurry!</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table style="border: 1px solid black; width: 400px">
+      <caption>
+        The same but different...?
+      </caption>
+
+      <tbody>
+        <tr>
+          <td style="border: 1px dotted purple" colspan="1" rowspan="4">
+            Machineman Montgomrey
+          </td>
+        </tr>
+        <tr>
+          <td style="border: 1px dotted purple">Age</td>
+        </tr>
+        <tr>
+          <td style="border: 1px dotted purple">Accent</td>
+        </tr>
+        <tr>
+          <td style="border: 1px dotted purple">Almost</td>
+        </tr>
+      </tbody>
+    </table>
+    <style>
+      #table {
+        text-align: center;
+      }
+      #table tbody tr:nth-of-type(odd) {
+        background-color: lightgray;
+      }
+      #table thead,
+      #table tfoot {
+        background-color: lightcyan;
+      }
+    </style>
+    <table id="table" style="border: 1px solid black; width: 400px">
+      <caption>
+        3rd Times a charm?
+      </caption>
+      <thead>
+        <tr>
+          <th>Expense</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Coffee</td>
+          <td>£6</td>
+        </tr>
+        <tr>
+          <td>Tea</td>
+          <td>£3</td>
+        </tr>
+        <tr>
+          <td>Milk</td>
+          <td>£2</td>
+        </tr>
+        <tr>
+          <td>Juice</td>
+          <td>£2</td>
+        </tr>
+        <tr>
+          <td>Water</td>
+          <td>£1</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>£11</td>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+    <h2></h2>
+    <p></p>
+    <br />
+  </body>
+</html>
