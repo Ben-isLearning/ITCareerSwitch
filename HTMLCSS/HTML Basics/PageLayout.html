@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <style> 
+    #btn1:active {
+      color: red; 
+    }
+    #link1:visited {
+      color: blueviolet;
+    }
+
+    #para1:hover {
+      background-color: green; 
+    }
+    
+    </style>
+  </head>
+  <body>
+    <h1>Page Layout</h1>
+    <div>
+      <h2>The Box Model; Everything is a box</h2>
+      <p>
+        margin (Space between Border and other Elements Borders)<br />
+        border (Line around the Content Box)<br />
+        padding (Space between Content and Border) <br />
+        content (Actual Stuff in HTML element) <br />
+        padding (Space between Content and Border) <br />
+        border (Line around the Content Box)<br />
+        margin (Space between Border and other Elements Borders)<br />
+        <br />
+        Content ~ Taken care of by HTML <br />
+        padding: controls padding<br />
+        border: controls border <br />
+        margin: control margin <br />
+        <br />
+      </p>
+    </div>
+
+    <div>
+      <h2>Normal Flow </h2>
+      <p>
+        is the order in which browser reads the code, from top to bottom. <br />
+        Especially important when using div or p tags. <br /> 
+        The difference between Ex1 and Ex2 shows the differences of nesting elements. <br>
+        Ex 1: illustrates the difference between float:right; and float:left;<br><br>
+        Ex 1: Box under a Box; <br>
+        <div style="border:2px solid blue; width:500px;float:right;"> This is a box </div> <br>
+        <div style="border:3px solid green; width: 500px;float:left;"> this is also a box</div> <br>
+        <br>
+        Ex 2: Box inside a Box; <br>
+        <div style="border:2px solid blue; width:150px;"> This is a box 
+          <div style="border:3px solid green; width: 100px;float:right;">This is a Box inside a Box</div>
+        </div>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>CSS box-sizing</h2>
+      <p><strong> Ideally, the entire project needs to be one or the other</strong> <br>
+        By default <strong>box-sizing: content-box;</strong> follows this formula: <br> <br>
+        width(300px) + padding + border = actual width <br>
+        height(100px) + padding + border = actual height <br> <br> 
+
+        But <strong>box-sizing: border-box;</strong> changes the formula: <br><br>
+        width(300px) = actual width <br>
+        height(100px) = actual height <br><br>
+
+        Ex 1; 300*100 vs 300*100 with padding  <br><br> 
+        <div style="  width: 300px;
+        height: 100px;
+        border: 3px solid blue;"> Example 1; 300px x 100px + 3px (border)</div>
+        <br> <br>
+        <div style="  width: 300px;
+        height: 100px; 
+        padding: 25px;
+        border: 3px solid blue;"> Example 1; 300px x 100px + 3px (border) + 25px (Padding) </div>
+        <br>
+        <br>
+        Ex 2; 300*100 vs 300*100 with padding <br><br> 
+        <div style="  width: 300px;
+        height: 100px;
+        border: 3px solid blue;box-sizing: border-box;"> Example 2; 300px x 100px + 3px (border)</div>
+        <div style="  width: 300px;
+        height: 100px; 
+        padding: 25px;
+        border: 3px solid blue;box-sizing: border-box;"> Example 2; 300px x 100px + 3px (border) + 25px (Padding) </div>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Hyperlinks in an Unordered List</h2>
+      <p>CSS enables us to use Semantic Coding; <br>
+      Essentially writing code in such a manner it gives the visitor a visual clue <br>
+    as to what the purpose of a cetrain element represents <br><br>
+  <strong>Ex 1: nav, main, article, form. vs div, div, div, div.</strong> <br> <br>
+  <ul style="display:inline">
+    <li>alpha</li>
+    <li>beta</li>
+    <li>gamma</li>
+  </ul>
+  <ul style="list-style:armenian;">
+  <li>alpha</li>
+  <li>beta</li>
+  <li>gamma</li>
+</ul>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Psuedo-Classes </h2>
+      <p>a psuedo class is a keyword added to a selector, <br>
+        <strong>that specifies a particular state of operation. <br> </strong>
+        IN THIS ORDER ~ :link | :visited | :focus | :hover | :active | <br> <br>
+    For example, usually Hyperlinks are Blue, but when they're clicked they go purple <br>
+    Lets attempt that with a button... <br>
+     Sort of, works when its clicked, doesn't remain.   <br> <br>
+    <button id="btn1">Click me - I am a useless button</button> <br>
+    <p id="para1">Lorem ipsum dolor sit amet.</p>
+    <a id="link1" target="_blank" href="https://www.google.co.uk">google!</a>
+  </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Hiding Content for Accessability </h2>
+      <p>
+        Imagine the Hero image of "Safari Tours" includes the brand name, and a delightful picture <br>
+        But users with screen readers won't be able to see the image at all... <br>
+        As such, <br>
+        We can still include a heading in a h1 tag, but ensure the tag is hidden from view. <br>  
+        <h1 id="styleMe" style="text-indent: 100%; white-space: nowrap; overflow:hidden;">Safari Tours</h1>
+        Its here, inspect for more! <br> <br>
+        h1 Safari Tours /h1 <br>
+        css { <br>
+          text-indent: 100%; <br>
+          white-space: nowrap; <br>
+          overflow: hidden; <br>
+        } <br> <br>
+
+      </p>
+      <br />
+    </div>
+  </body>
+</html>
