@@ -169,9 +169,9 @@
       (Both content and styles) <br>
       Various DOM methods exist within jQuery... <br> <br>
       <strong>Primary Methods:</strong> <br>
-      text() - sets or returns text content of the selected element <br>
-      html() - sets or returns all content of the selected element (including HTML markup) <br>
-      val() - sets or returns values in form fields <br>
+      <strong>text()</strong> - sets or returns text content of the selected element <br>
+      <strong>html()</strong> - sets or returns all content of the selected element (including HTML markup) <br>
+      <strong>val()</strong>- sets or returns values in form fields <br>
       <br>
       Ex 1 + 2: text() + html()<br>
       The below codeblock has 2 functions, nested inside of a 3rd ready function <br>
@@ -254,5 +254,48 @@
     </p>
       <br />
     </div>
+
+    <div>
+      <h2>Additional Methods:</h2>
+      <p> Creating and removing HTML content via jQuery methods <br><br>
+      append() - Add something after a prior element<br>
+      prepend()  - Add something before a prior element<br>
+      after() <br>
+      before() <br>
+      remove() <br> <br>
+
+      Ex 1: append() <br>
+      <p id="sausage">Sausage Sausage Sausage Sausage</p> 
+      <button onclick="appendText()">Add some text</button> <br><br>
+
+      function appendText() {
+        Create Text With HTML; <br>
+        <strong>let text = "&lt;p> This is a body of text &lt;p>" <br></strong> <br>
+        Create Text with Jquery; <br>
+        <strong>let textCreate = $("&lt;p>&lt;/p>").text("Thios is another body of text.") <br></strong>
+        <br>  Create Text with DOM; <br> 
+        <strong>
+          let textGenerate = document.createElement("p"); <br>
+          textGenerate.innerHTML = "Text created using the DOM"; <br> <br>
+        </strong>
+        Assign all 3 values with append();  <br>
+        <strong>$("#sausage").append(text, textCreate, textGenerate); <br></strong>
+      } <br> <br>
+     
+
+      <script>
+        function appendText() { let text = "<p> This is a body of text <p>"
+        let textCreate = $("<p></p>").text("Thios is another body of text.")
+        let textGenerate = document.createElement("p");
+        textGenerate.innerHTML = "Text created using the DOM";
+        $("#sausage").append(text, textCreate, textGenerate);
+        }
+      </script>
+      </p>
+      <br />
+    </div>
+
+    
+
   </body>
 </html>
