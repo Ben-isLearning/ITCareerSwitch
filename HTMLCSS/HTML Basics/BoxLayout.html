@@ -10,7 +10,12 @@
     <h1>Flexible Box Layout (Flexbox)</h1>
 
     <div>
-      <h2>Configure a Flexible Container (Flexbox)</h2>
+      <h2>
+        Configure a Flexible Container (Flexbox)
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+          >Best Resource Here</a
+        >
+      </h2>
       <p>
         All items within a flexbox are 'flexible' - they all have the same size
         <br />
@@ -22,17 +27,87 @@
       <br />
     </div>
     <div>
-      <h2>Direction</h2>
+      <h2>Direction ~ flex-direction:</h2>
       <p>
         The direction of flow within a flexbox is configured using the
-        flex-direcition: property <br />
-        flex-direction: row; <br />
+        flex-direcition: property sets the directional flow of the child
+        elements. <br />
+        flex-direction: row; (By Default Flows Left To Right)<br />
+        flex-direction: row-reverse; (Flows from Right to left) <br />
+        flex-direction: column; (Flows from Top to Bottom) <br />
+        flex-direction: column-reverse: (flows from Bottom to Top) <br />
       </p>
       <br />
+      <div
+        style="
+          width: 60%;
+          height: 100px;
+          justify-content: flex-start;
+          display: flex;
+          border: 2px solid blue;
+        "
+      >
+        <div style="flex: 1; border: 2px solid green">Uno</div>
+        <div style="flex: 1; border: 2px solid green">Dos</div>
+        <div style="flex: 1; border: 2px solid green">Tres</div>
+        <div style="flex: 1; border: 2px solid green">Quatro</div>
+        <div style="flex: 1; border: 2px solid green">Cinqo</div>
+      </div>
+      <br />
+      <div
+        style="
+          width: 60%;
+          height: 100px;
+          justify-content: flex-start;
+          display: flex;
+          flex-direction: row-reverse;
+          border: 2px solid blue;
+        "
+      >
+        <div style="flex: 1; border: 2px solid green">Uno</div>
+        <div style="flex: 1; border: 2px solid green">Dos</div>
+        <div style="flex: 1; border: 2px solid green">Tres</div>
+        <div style="flex: 1; border: 2px solid green">Quatro</div>
+        <div style="flex: 1; border: 2px solid green">Cinqo</div>
+      </div>
+      <br />
+      <div
+        style="
+          width: 60%;
+          height: 150px;
+          justify-content: flex-start;
+          flex-direction: column;
+          display: flex;
+          border: 2px solid blue;
+        "
+      >
+        <div style="flex: 1; border: 2px solid green">Uno</div>
+        <div style="flex: 1; border: 2px solid green">Dos</div>
+        <div style="flex: 1; border: 2px solid green">Tres</div>
+        <div style="flex: 1; border: 2px solid green">Quatro</div>
+        <div style="flex: 1; border: 2px solid green">Cinqo</div>
+      </div>
+      <br />
+      <div
+        style="
+          width: 60%;
+          height: 150px;
+          justify-content: flex-start;
+          display: flex;
+          flex-direction: column-reverse;
+          border: 2px solid blue;
+        "
+      >
+        <div style="flex: 1; border: 2px solid green">Uno</div>
+        <div style="flex: 1; border: 2px solid green">Dos</div>
+        <div style="flex: 1; border: 2px solid green">Tres</div>
+        <div style="flex: 1; border: 2px solid green">Quatro</div>
+        <div style="flex: 1; border: 2px solid green">Cinqo</div>
+      </div>
     </div>
 
     <div>
-      <h2>Single or Multiline?</h2>
+      <h2>Single or Multiline? ~ flex-wrap:</h2>
       <p>
         Whether or not the flexbox spans several lines is figured using the
         flex-wrap: property <br />
@@ -42,17 +117,78 @@
         needs) <br />
         <br />
       </p>
+      <div
+        style="
+          width: 60%;
+          height: 120px;
+          justify-content: flex-start;
+          display: flex;
+          flex-basis: 100px;
+          border: 2px solid blue;
+          flex-wrap: wrap;
+        "
+      >
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Uno
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Dos
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Tres
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Quatro
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Cinqo
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Seis
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Uno
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Dos
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Tres
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Quatro
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Cinqo
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Seis
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Uno
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Dos
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Tres
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Quatro
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Cinqo
+        </div>
+        <div style="min-width: 100px; flex: 1; border: 2px solid green">
+          Seis
+        </div>
+      </div>
+
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
-
-    <div>
-      <h2>Display Style - justify-content:</h2>
+      <h2>Display Style MAIN AXIS- justify-content:</h2>
       <p>
         the justify-content: property will define the alignment on the main
         axis. <br />
@@ -134,19 +270,151 @@
     </div>
 
     <div>
+      <h2>Display Style CROSS AXIS - align-items:</h2>
+      <p>
+        The align-items: property wil ldefine the alignment on the cross axis.
+        <br />
+        (How the items in flexbox are displayed) <br />
+        <br />
+        align-items: flex-start; ( Items start at beginning of Cross axis)
+        <br />
+        align-items: flex-end; (items start and the end of the Cross Axis)
+        <br />
+        align-items: center; (items are centered at the center of the cross
+        axis) <br />
+        align-items: stretch; ( (Default - items take up 100% of the space along
+        the main Axis) <br />
+        align-items: baseline; (items are centered along the cross axis, but
+        retain their size) <br />
+        <br />
+      </p>
+      <br />
+      <div
+        style="
+          height: 100px;
+          display: flex;
+          align-items: flex-start;
+          border: 1px solid green;
+          width: 60%;
+        "
+      >
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+      <div
+        style="
+          height: 100px;
+          align-items: flex-end;
+          display: flex;
+          border: 1px solid green;
+          width: 60%;
+        "
+      >
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+      <div
+        style="
+          height: 100px;
+          display: flex;
+          align-items: center;
+          border: 1px solid green;
+          width: 60%;
+        "
+      >
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+      <div
+        style="
+          height: 100px;
+          display: flex;
+          align-items: baseline;
+          border: 1px solid green;
+          width: 60%;
+        "
+      >
+        <div style="flex: 1; border: 1px solid red">
+          Lorem ipsum dolor sit amet lorem10. Hello i am a sandwich lol ok pls
+          more txt
+        </div>
+        <div style="flex: 2; border: 1px solid red">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis,
+          maiores.I am a
+        </div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+      <div
+        style="
+          height: 100px;
+          display: flex;
+          align-items: stretch;
+          border: 1px solid green;
+          width: 60%;
+        "
+      >
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+
+    <div>
       <h2>Display Proportion - flex:</h2>
       <p>
         the flex: property will define the display proportions of the items
         within the flexbox <br />
+        the flex: property is shorthand for flex-grow, flex-shrink and
+        flex-basis, as such <br />
+        it can take 1, 2 or 3 properties. <br />
+        flex-grow: 2; (means let grow factor = 2 | by Default its 1) <br />
+        flex-shrink: 2; (means let shrink factor = 2 | Default its 1) <br />
+        flex-basis: 100px; (Means size = 100px - let Flexing occur after |
+        Default its 0) <br />
+        <br />
+        flex: "flex-grow"; <br />
+        flex: "flex-grow" "flex-basis"; <br />
+        flex: "flex-grow" "flex-shrink" "flex-basis"; <br /><br />
         (Whether item1 is meant to be larger than item2 etc) <br />
         fantastic resource ~
         <a href="https://css-tricks.com/almanac/properties/f/flex/">Here</a>
       </p>
       <div style="display: flex; border: 1px solid green; width: 60%">
-        <div style="border: 1px solid red">Hello</div>
-        <div style="border: 1px solid red">I am a</div>
-        <div style="border: 1px solid red">Boxxy Box!</div>
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
       </div>
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div style="flex: 2; border: 1px solid red">Hello</div>
+        <div style="flex: 1; border: 1px solid red">I am a</div>
+        <div style="flex: 2; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div style="flex: 1; flex-shrink: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 1; flex-shrink: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 1; flex-shrink: 1; border: 1px solid red">
+          Boxxy Box!
+        </div>
+      </div>
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 3; border: 1px solid red">I am a</div>
+        <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div style="flex: 1; border: 1px solid red">Hello</div>
+        <div style="flex: 2; border: 1px solid red">I am a</div>
+        <div style="flex: 3; border: 1px solid red">Boxxy Box!</div>
+      </div>
+
       <br />
     </div>
 
