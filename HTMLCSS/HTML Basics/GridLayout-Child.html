@@ -7,12 +7,196 @@
     <title>Template</title>
   </head>
   <body>
-    <h1>I AM A TEMPLATE</h1>
+    <h1>Grids (Continued)</h1>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Positioning Within the Grid ~ grid-xxx-xxx;</h2>
+      <p>
+        To control the position of the element within the grid, there are four
+        elements. <br />
+        grid-column-start: <br />
+        grid-column-end: <br />
+        grid-row-start: <br />
+        grid-row-end: <br />
+        <br />
+
+        The potential values for all of these properties are;<br />
+        1 (numbered grid line) <br />
+        span 3 (item will span across the provided number of tracks) <br />
+        span "name" (item will span across untill it hits the next line with the
+        name provided) <br />
+        auto (automatically do it) <br />
+        <br />
+        Example; <br />
+        .item-a { <br />
+        grid-column-start: 2; <br />
+        grid-column-end: 5; <br />
+        grid-row-start: row1-start; <br />
+        grid-row-end: row2-end; <br />
+        } <br />
+        <br />
+        Example 2; <br />
+        .item-b { <br />
+        grid-column-start: 1; <br />
+        grid-column-end: span column4-start;<br />
+        grid-row-start: 2; <br />
+        grid-row-end: span 2; <br />
+        } <br />
+        <br />
+        <div   style="border: 3px solid blue; display: grid; height: 200px; width: 200px; grid-template-columns: 50px 50px 50px 50px; grid-template-rows: 50px 50px 50px 50px;">
+          <div style="background-color:olive; grid-column-start: 1; grid-column-end: 3; grid-row-start: 1; grid-row-end:3;"></div>
+          <div style="background-color: dodgerblue; grid-column-start: 3; grid-column-end: 5; grid-row-start: 1; grid-row-end:3;"></div>
+          <div style="background-color: palevioletred; grid-column-start: 1; grid-column-end: 5; grid-row-start: 3; grid-row-end:5;"></div>
+        </div>
+      </p>
+      Enable grid within Dev tools to see more <br>
       <br />
     </div>
+
+    <div>
+      <h2>Shorthand for Positioning - grid-xxx:</h2>
+      <p>The shorthand properties for this is grid-column: and grid-row: <br>
+      ofcourse, these properties take 2 values, the starting point and the ending point. <br> 
+      As such, the previous examples become... <br><br>
+      <br />
+      Example; <br />
+      .item-a { <br />
+      grid-columm: 2 / 5; <br>
+      grid-row: row1-start / row2-end; <br />
+      } <br />
+      <br />
+      Example 2; <br />
+      .item-b { <br />
+      grid-column: 1 / column4-start;<br />
+      grid-row: 2 / span 2; <br />
+      } <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+        <h2> (Copied from Parent section) Set some areas  ~ grid-template-areas:</h2>
+        <p>The grid-template-areas: property allows us to create an 'area' of the grid <br>
+           by referencing the individual names of the grid squares. <br>
+          grid-area-name: can take three values; {Name of Area} | . (Meaning Empty Cell) | none (Meaning no areas are defined) <br>
+          Much like Javascript Functions, the grid-template-areas should be defined, with "grid-template-areas:" then called, <br>
+          Called with the grid-area: property, supplying the name defined prior. <br>
+        </p>
+        <div style="grid-template-areas: 'head head head' 'mainleft . mainright' ' foot foot foot' ; width:500px; height: 300px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style=" border: 1px solid hotpink;grid-area:head"> I am the head! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, facere.</div>
+        <div style=" border: 1px solid hotpink;grid-area:foot"> I am the Feet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, minus?</div>
+        <div style=" border: 1px solid hotpink;grid-area:mainleft">I am Left hand in this! </div>
+        <div style=" border: 1px solid hotpink;grid-area:mainright">I am Right hand in this! </div>
+        </div>
+        <br />
+      </div>
+      <br />
+    </div>
+    </div>
+
+    <div>
+      <h2>Painting the Walls! ~ grid-area: </h2>
+      <p>the grid-area: property references the names created within the grid-template-areas: property <br>
+      OR it can be used as shorthand for both grid-column: and grid-row: properties. <br> 
+      The Shorhand property requires 4 values; Row start / Row end / Col start / Col end.  <br><br>
+
+      If using name;<br>
+      .item1 { <br>
+      grid-area: specifiedName <br>
+    } <br><br>
+    If using as shorthand; <br>
+    item2 { <br>
+      grid-area: 1 / column4-start / 2 / span 2; <br />
+    } <br><br>
+    </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Moving single cell contents within Main Axis ~ justify-self: </h2>
+      <p>justify-self: property takes 1 value, <br> 
+        And behaves much the same as justify-content: and justify-items:... But on a SINGLE CELL. <br>
+
+        justify-self: start | end | center | stretch;</p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Moving single cell contents within Cross Axis ~ align-self: </h2>
+      <p> align-self: property takes 1 value, <br>
+        and behaves much the same as align-content: and align-items:... but on a SINGLE CELL <br> 
+        align-self: start | end | center | stretch; <br>
+
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Shorthand for single cell Both Axis ~ place-self; </h2>
+      <p>place-self: property takes 2 values, <br>
+      and behaves much like place-items: and place-content:  <br>
+      place-self: align-self Value justify-self Value; <br>
+       </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Sizing Conventions</h2>
+      <p>Use fr - Fractional Units. <br>
+      for example; if the entire space avaliable was cut up into equal fractions, <br>
+      Allocate the space accordingly... <br>
+      Ex; <br>
+      <strong>grid-template-columns: 1fr 3fr; </strong> ~ Would divide space 25% / 75% between the two grid columns. <br>
+    </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Sizing Keywords</h2>
+      <p>In addition to px, rem, %, we also have sizing keywords... <br>
+        <strong>min-content: <br></strong>
+        Set a value that is the smallest you want the content box to be <br>
+        <strong>max-content: <br></strong>
+        set a value that is the largest you want the content box to be <br>
+        <strong>auto: <br></strong>
+        alot like fr... but loses out to fr.. <br>
+        <strong>fit-content: <br> </strong>
+        use the space avaliable, but never less than min-content and never more than max-content <br>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Grid Specific Functions </h2>
+      <p> 
+        <strong>repeat()</strong> <br>
+        The repeat(X, Y) function literally repeats an action X times, at Y size; <br><br>
+        grid-template-columns: repeat(6, 1fr); <br>
+        This yeilds 6 columns - each with 1fr of space. 
+        <br><br>
+        <strong>minmax()</strong> <br>
+        The minmax() function defines a size range greater than or equal to min, and less than or equal to max. <br>
+        The difference turns: <br>
+        grid-template-columns: repeat(3, 1fr); <br> 
+        into <br>
+        grid-template-columns: repeat(3, minmax(10px, 1fr)); <br>
+
+        The minmax() ensures that the columns do not go below 10px, nor do they exceed 1fr (in this example) <br>
+      
+      <br>
+      <strong>auto-fill</strong>
+      the auto-fill keyword will automatically fill as many possible columns on the row, even if they are empty.  <br>
+      Auto-fill ~ Fill this row full o' columns, Don't care whats in em'!  
+        <br><br>
+      <strong>auto-fit</strong>
+      the auto-fit keyword will automatically fit the given amount of columns into the row.   <br>
+      auto-fit ~ Expand the full columns to fit this entire Row!
+      <br><br>
+      <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/"> More Here!</a>
+      <br>
+    </p>
+      <br />
+    </div>
+
   </body>
 </html>
