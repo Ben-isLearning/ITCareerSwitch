@@ -7,12 +7,226 @@
     <title>Template</title>
   </head>
   <body>
-    <h1>I AM A TEMPLATE</h1>
+    <h1>
+      CSS Grid layout -
+      <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">
+        Invaluable Resource</a
+      >
+    </h1>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>CSS Grid</h2>
+      <p>
+        desiged to allow a 2d grid layout on a webpage <br />
+        can be fixed size or flexible <br />
+        Can change order of precedence <br />
+      </p>
       <br />
     </div>
+
+    <div>
+      <h2>Laying the groundwork ~ display:</h2>
+      <p>
+        a grid element is acheived by setting the display: element to either;
+        <br />
+        display: grid; (For a Block-Level grid) <br />
+        display: inline-grid; (For an Inline-Level grid)
+      </p>
+      <p>
+        <strong>Block Example;</strong> dolor sit amet consectetur adipisicing
+        elit. Omnis at
+        <span style="border: 1px solid salmon; display: grid">123123</span>
+        suscipit expedita perferendis quasi quis. Commodi deserunt dolorem ullam
+        esse
+      </p>
+      <p>
+        <strong>Inline Example;</strong> sit amet consectetur adipisicing elit.
+        Ducimus,
+        <span style="border: 1px solid salmon; display: inline-grid"
+          >123123</span
+        >
+        repellendus nostrum voluptas deserunt officia adipisci neque maiores
+        provident quisquam non?
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Building the Walls ~ grid-template-...</h2>
+      <p>
+        The two properties grid-template-columns: and grid-template-rows: define
+        the <br />
+        amount of rows and columns, their sizes, and their names. <br />
+        These properties take 2 values; <br /> 
+        1st) line-name ~ which can be anything we chose, inside [ ] . <br />
+        2nd) track-size ~ which can be a length (100px), percentage (30%), fraction of free
+        space (1fr | 4fr)... <br />
+        or even the repeat function (which takes (amount, space)) [Ex:
+        repeat(5,1fr)] <br />
+        <br />
+       
+        <div style="width:500px; height: 300px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+          <div style="border:1px solid greenyellow">Col1/Row1 = first/one</div>
+          <div style="border:1px solid greenyellow">Col1/Row2 = first/two</div>
+          <div style="border:1px solid greenyellow">Col1/Row3 = first/three</div>
+          <div style="border:1px solid greenyellow">Col2/Row1 = second/one</div>
+          <div style="border:1px solid greenyellow">Col2/Row2 = second/two</div>
+          <div style="border:1px solid greenyellow">Col2/Row3 = second/three</div>
+          <div style="border:1px solid greenyellow">Col3/Row1 = third/one</div>
+          <div style="border:1px solid greenyellow">Col3/Row2 = third/two</div>
+          <div style="border:1px solid greenyellow">Col3/Row3 = third/three</div>
+        </div>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Set some areas  ~ grid-template-areas:</h2>
+      <p>The grid-template-areas: property allows us to create an 'area' of the grid <br>
+         by referencing the individual names of the grid squares. <br>
+        grid-area-name: can take three values; {Name of Area} | . (Meaning Empty Cell) | none (Meaning no areas are defined) <br>
+        Much like Javascript Functions, the grid-template-areas should be defined, with "grid-template-areas:" then called, <br>
+        Called with the grid-area: property, supplying the name defined prior. <br>
+      </p>
+      <div style="grid-template-areas: 'head head head' 'mainleft . mainright' ' foot foot foot' ; width:500px; height: 300px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+      <div style=" border: 1px solid hotpink;grid-area:head"> I am the head! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, facere.</div>
+      <div style=" border: 1px solid hotpink;grid-area:foot"> I am the Feet! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, minus?</div>
+      <div style=" border: 1px solid hotpink;grid-area:mainleft">I am Left hand in this! </div>
+      <div style=" border: 1px solid hotpink;grid-area:mainright">I am Right hand in this! </div>
+      </div>
+      <br />
+    </div>
+
+    <div>
+      <h2>Shorthand; grid-template: </h2>
+      <p>There is a shorthand version for this, but it uses a totally different syntax, and isn't actually that much shorter... <br>
+      
+      lets keep it long-handed... visit <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template">this page</a> If you wanna look into this further </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Make some space! ~ gap: </h2>
+      <p>The column-gap: and row-gap: properties define the space between grid cells. <br>
+      Both properties only take one value, the size of the gap. <br> 
+      The shorthand of these properties is simply gap: <br>
+      the gap: property takes 2 values; row gap value, column gap value. <br>
+      row-gap: 10px; column-gap: 15px;<strong> AND </strong> gap: 10px 15px; do the same thing.
+    </p>
+      <br />
+      <div style="gap:10px 15px; width:500px; height: 300px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">Col1/Row1 = first/one</div>
+        <div style="border:1px solid greenyellow">Col1/Row2 = first/two</div>
+        <div style="border:1px solid greenyellow">Col1/Row3 = first/three</div>
+        <div style="border:1px solid greenyellow">Col2/Row1 = second/one</div>
+        <div style="border:1px solid greenyellow">Col2/Row2 = second/two</div>
+        <div style="border:1px solid greenyellow">Col2/Row3 = second/three</div>
+        <div style="border:1px solid greenyellow">Col3/Row1 = third/one</div>
+        <div style="border:1px solid greenyellow">Col3/Row2 = third/two</div>
+        <div style="border:1px solid greenyellow">Col3/Row3 = third/three</div>
+      </div>
+    </p>
+    </div>
+
+    <div>
+      <h2>Move items within along the Main Axis ~ justify-items:</h2>
+      <p>the justify-items: property sets the alignment of the grid item within the grid cell. <br>
+        justify-items: property accepts start; | end; | center; | stretch; |
+        Same as Flexbox, just inside a grid <br>
+      </p>
+      <br />
+      <div style="justify-items: start; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+      <br>
+      <div style="justify-items: end; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+      <br>
+      <div style="justify-items: center; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+    </p>
+    </div>
+
+    <div>
+      <h2>Move items within along the Cross Axis ~ align-items: </h2>
+      <p>the align-items: property sets the alignment of the grid item within the grid cell. <br>
+      align-items: property accepts stretch; | start; | end; | center; | baseline;  </p>
+      <br />
+      <div style="align-items: start; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+      <br>
+      <div style="align-items: center; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+      <br>
+      <div style="align-items: end; gap:15px 15px; width:500px; height: 50px; border: 2px solid dodgerblue; display:grid; grid-template-columns: [first] 1fr [second] 1fr [third] 1fr; grid-template-columns: [one] 1fr [two] 1fr [three] 1fr;">
+        <div style="border:1px solid greenyellow">first/one</div>
+        <div style="border:1px solid greenyellow">first/two</div>
+        <div style="border:1px solid greenyellow">first/three</div>
+      </div>
+
+    </div>
+
+    <div>
+      <h2>Shorthand for align-items: + justify-items:  === place-items:</h2>
+      <p> the place-items: property is shorthand for both align-items: and justify-items: <br>
+        the place-items: property usually needs 2 values: align-items value, justify-items value; <br>
+        however if its the same value, 1 will work. <br>
+        Really good if you wanna slap your content in the center of its grid cells <br>
+        place-items: center; 
+      </p>
+      <br />
+    </div>
+
+        <div>
+      <h2>Move entire Grid along Cross Axis = align-content:</h2>
+      <p>
+      If the overall size of the Grid is less than the overall size of its container <br>
+      we can set the alignment of the entire grid within its container; <br>
+      the align-content: property behaves similarly to align-items: above. <br>
+      but the difference is its moving ALL CONTENT, rather than SINGLE ITEM <br>
+      </p>
+      <br />
+
+    </div>
+
+    <div>
+      <h2>Move entire Grid along Main Axis ~ justify-content: </h2>
+      <p>
+      If the overall size of the Grid is less than the overall size of its container <br>
+      we can set the alignment of the entire grid within its container; <br>
+      the justify-content: property behaves similarly to justify-items: above. <br>
+      but the difference is its moving ALL CONTENT, rather than SINGLE ITEM <br>
+    </p>
+      <br />
+
+    </div>
+        
+    <div>
+      <h2>Moving Entire Gird Shorthand ~ place-content: </h2>
+      <p>
+        The place-content: property is a shorthand for the align-content: and justify-content: properties <br>
+        the place-contnet: property usually needs 2 values: align-content value, justify-cotent value; <br>
+        however if its the same value, 1 will work. <br>
+        Really good if you wanna slap your content in the center of its grid cells <br>
+        place-items: center; 
+      </p>
+      <br />
+
+  </div>
+
   </body>
 </html>
