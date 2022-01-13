@@ -7,23 +7,155 @@
     <title>Template</title>
   </head>
   <body>
-    <h1>Box Layout</h1>
+    <h1>Flexible Box Layout (Flexbox)</h1>
+
+    <div>
+      <h2>Configure a Flexible Container (Flexbox)</h2>
+      <p>
+        All items within a flexbox are 'flexible' - they all have the same size
+        <br />
+        They all have allocated space.
+      </p>
+      <p>a flexbox is setup through the display: property <br /></p>
+      display: inline-flex; - For flexible inline containers <br />
+      display:
+      <br />
+    </div>
+    <div>
+      <h2>Direction</h2>
+      <p>
+        The direction of flow within a flexbox is configured using the
+        flex-direcition: property <br />
+        flex-direction: row; <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Single or Multiline?</h2>
+      <p>
+        Whether or not the flexbox spans several lines is figured using the
+        flex-wrap: property <br />
+        flex-wrap: nowrap; (By default, a flexbox will maintain a single-line
+        display) <br />
+        flex-wrap: wrap; (Flexbox can be set to wrap over as many lines as it
+        needs) <br />
+        <br />
+      </p>
+      <br />
+    </div>
 
     <div>
       <h2></h2>
       <p></p>
       <br />
     </div>
+
+    <div>
+      <h2>Display Style - justify-content:</h2>
+      <p>
+        the justify-content: property will define the alignment on the main
+        axis. <br />
+        (How the items in flexbox are displayed, and how white space is
+        displayed, if at all)
+        <br />
+        <br />
+        justify-content: flex-start; (Default - Position @ Beginning of main
+        Axis) <br />
+        justify-content: flex-end; (Start @ End of main axis) <br />
+        justify-content: center; (Center @ Middle of main axis) <br />
+        justify-content: space-between; (Whitespace between elements, no padding
+        on edge) <br />
+        justify-content: space-around; (Whitespace between and around elements)
+        <br /><br />
+
+        fantastic resource ~
+        <a
+          href="https://css-tricks.com/almanac/properties/j/justify-content/"
+          target="_blank"
+          >Here</a
+        >
+      </p>
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div>Hello</div>
+        <div>I am a</div>
+        <div>Boxxy Box!</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          border: 1px solid green;
+          width: 60%;
+          justify-content: flex-end;
+        "
+      >
+        <div>Hello</div>
+        <div>I am a</div>
+        <div>Boxxy Box!</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          border: 1px solid green;
+          width: 60%;
+          justify-content: center;
+        "
+      >
+        <div>Hello</div>
+        <div>I am a</div>
+        <div>Boxxy Box!</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          border: 1px solid green;
+          width: 60%;
+          justify-content: space-between;
+        "
+      >
+        <div>Hello</div>
+        <div>I am a</div>
+        <div>Boxxy Box!</div>
+      </div>
+      <div
+        style="
+          display: flex;
+          border: 1px solid green;
+          width: 60%;
+          justify-content: space-around;
+        "
+      >
+        <div>Hello</div>
+        <div>I am a</div>
+        <div>Boxxy Box!</div>
+      </div>
+
+      <br />
+    </div>
+
+    <div>
+      <h2>Display Proportion - flex:</h2>
+      <p>
+        the flex: property will define the display proportions of the items
+        within the flexbox <br />
+        (Whether item1 is meant to be larger than item2 etc) <br />
+        fantastic resource ~
+        <a href="https://css-tricks.com/almanac/properties/f/flex/">Here</a>
+      </p>
+      <div style="display: flex; border: 1px solid green; width: 60%">
+        <div style="border: 1px solid red">Hello</div>
+        <div style="border: 1px solid red">I am a</div>
+        <div style="border: 1px solid red">Boxxy Box!</div>
+      </div>
+      <br />
+    </div>
+
     <div>
       <h2></h2>
       <p></p>
       <br />
     </div>
-    <div>
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
+
     <div>
       <h2></h2>
       <p></p>
