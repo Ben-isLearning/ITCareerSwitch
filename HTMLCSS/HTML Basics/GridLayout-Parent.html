@@ -212,7 +212,6 @@
       but the difference is its moving ALL CONTENT, rather than SINGLE ITEM <br>
     </p>
       <br />
-
     </div>
         
     <div>
@@ -225,8 +224,85 @@
         place-items: center; 
       </p>
       <br />
-
   </div>
+
+  <div>
+    <h2>What if there are more cells than Grid? ~ grid-auto-xxx: </h2>
+    <p>The grid-auto-rows: and grid-auto-columns: properties enable us to specify the size of <br>
+    any automatically generated grid tracks. <br>
+    Realistically if you've specified a 3 x 3 grid, but you've got 12 content elements, thats when you need grid-auto! <br>
+    both grid-auto-rows: and grid-auto-columns: take 1 perameter, the size of the grid you want. <br>
+    The single value can be lengths, a percentage or a fraction of the free space (fr) <br> 
+    lets declare a small 2x2 grid, but have more than 4 content elements... <br>
+    Thanks to the auto-rows - The rows kept commin'... And it can mess with the layout...  <br><br>
+
+    <div style="grid-auto-rows:60px; grid-auto-columns:60px; height:120px; width: 120px; display:grid; grid-template-rows: 60px 60px; grid-template-columns: 60px 60px; border: 3px solid green; ">
+<div style="border: 1px solid olive;">A</div>
+<div style="border: 1px solid olive;">B</div>
+<div style="border: 1px solid olive;">C</div>
+<div style="border: 1px solid olive;">D</div>
+<div style="border: 1px solid olive;">A</div>
+<div style="border: 1px solid olive;">B</div>
+<div style="border: 1px solid olive;">C</div>
+<div style="border: 1px solid olive;">D</div>
+    </div>
+    </p>
+    <br />
+  </div>
+
+  <div>
+    <h2>What about the flow of the automatically placed cells? ~ gid-auto-flow:     </h2>
+    <p>
+      When automatic grid cells are placed in, they need to be instructed what way to flow too. <br>
+      the auto-placement algorithm kicks in, set its direction by using the grid-auto-flow: property. <br>
+      the grid-auto-flow: property only takes 1 value, but it can take; <br>
+      row; | column; | row dense; | column dense; <br> <br>
+      Here the grid-auto-flow: column; has been ruled. - Fun! <br>
+
+      <div style="grid-auto-flow: column; grid-auto-rows:60px; grid-auto-columns:60px; height:120px; width: 120px; display:grid; grid-template-rows: 60px 60px; grid-template-columns: 60px 60px; border: 3px solid green; ">
+        <div style="border: 1px solid olive;">A</div>
+        <div style="border: 1px solid olive;">B</div>
+        <div style="border: 1px solid olive;">C</div>
+        <div style="border: 1px solid olive;">D</div>
+        <div style="border: 1px solid olive;">A</div>
+        <div style="border: 1px solid olive;">B</div>
+        <div style="border: 1px solid olive;">C</div>
+        <div style="border: 1px solid olive;">D</div>
+        <div style="border: 1px solid olive;">A</div>
+        <div style="border: 1px solid olive;">B</div>
+        <div style="border: 1px solid olive;">C</div>
+        <div style="border: 1px solid olive;">D</div>
+        <div style="border: 1px solid olive;">A</div>
+        <div style="border: 1px solid olive;">B</div>
+        <div style="border: 1px solid olive;">C</div>
+        <div style="border: 1px solid olive;">D</div>
+        <div style="border: 1px solid olive;">A</div>
+        <div style="border: 1px solid olive;">B</div>
+        <div style="border: 1px solid olive;">C</div>
+        <div style="border: 1px solid olive;">D</div>
+            </div>
+            </p>
+            <br />
+          </div>
+    </p>
+    <br />
+  </div>
+
+  <div>
+    <h2>Shorthand for nearly EVERYTHING? ~ grid: </h2>
+    <p>Whaaaat? <br>
+    Yeah - Shorthand property for;<br>
+    grid-template-rows, grid-template-columns, grid-template-areas, <br>
+    grid-auto-rows, grid-auto-columns, and grid-auto-flow.  <br> all at once! <br>
+    <br>
+    Learn more at <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid"> This Link</a> <br>
+
+    Right now, I'm not ready for it!
+
+  </p>
+    <br />
+  </div>
+
 
   </body>
 </html>
