@@ -419,6 +419,41 @@
     </div>
 
     <div>
+      <h2>Wildcard - align-self:</h2>
+      <p>This allows the set alignment by the flex-container to be overwritten inside of a flex-item <br>
+      </p>
+      <div
+      style="
+        display: flex;
+        border: 1px solid green;
+        width: 60%;
+        justify-content: center;
+        align-items: flex-end;
+        height: 50px;
+      "
+    >
+      <div style="border: 1px solid burlywood">Hello</div>
+      <div style="border: 1px solid burlywood; align-self: center;" >I am a</div>
+      <div style="border: 1px solid burlywood">Boxxy Box!</div>
+    </div>
+    <div
+    style="
+      display: flex;
+      border: 1px solid green;
+      width: 60%;
+      justify-content: space-between;
+      height: 50px;
+      align-items: flex-start;
+    "
+  >
+    <div style="border: 1px solid salmon; ">Hello</div>
+    <div style="border: 1px solid salmon; align-self:stretch;">I am a</div>
+    <div style="border: 1px solid salmon; ">Boxxy Box!</div>
+  </div>
+      <br />
+    </div>
+
+    <div>
       <h2>Styling Multiple Lines of Flexbox ~ align-content:</h2>
       <p>The align-content: property aligns multiple lines of items within a flexbox. <br> 
         I dont plan to use these - I might change my mind. <br> <br>
@@ -470,7 +505,6 @@
       <div style="flex: 2; border: 1px solid red">I am a</div>
       <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
       </div>
- 
       <br />
     </div>
   </body>
