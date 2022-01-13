@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <h1>Designing for the Mobile Web</h1>
+
+    <div>
+      <h2>Methods:</h2>
+      <p>
+        .mobi - Mobile domain extension. <br />
+        Mobile directory inside website <br />
+        Different Stylesheets <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Considerations;</h2>
+      <p>
+        Small screen Sizes; <br />
+        Low bandwidth <br />
+        font, color and media - common fonts, good contrast between bg and text.
+        <br />
+        awkward controls - Consider touch displays <br />
+        functionality - Ensure hyperlinks are accessable. <br /><br />
+
+        Use single colum design. <br />
+        Navigation on top, after hero <br />
+        provide consistent navigation (fixed or follows in burger etc)<br />
+        main content first <br />
+        footers for additional nav / info <br />
+        limit scrolling in one direction <br />
+        use heading <br />
+        use lists <br />
+        Do not use tables. <br />
+        Label form controls <br />
+        avoid using pixels. <br />
+        Avoid absolute position <br />
+        hide non-essential content <br />
+        avoid targeted hyperlinks <br />
+        balance number of links and levels <br />
+        avoid large image <br />
+        configure alternate smaller bg images <br />
+        avoid using images with text (won't downsize well) <br />
+        specify image sizes custom for mobile displays <br />
+        provide alternitive text for graphics <br />
+        <br />
+
+        use em or rem for text <br />
+        use short page titles <br />
+
+        <br />
+        <br />
+        <strong><h2>Design for One Web</h2></strong>
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Viewport metatag + Media Queries</h2>
+      <p>
+        Viewport helps to properly scale websites; <br />
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"
+        /> <br />
+        <br />
+        Directives (Properties) <br />
+        width= <br />
+        height= <br />
+        initial-scale= <br />
+        minimum-scale= <br />
+        user-scalable= <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>CSS Media Queries</h2>
+      <p>
+        Media queries literally do just that; CSS Questions the Media perameters
+        <br />
+        to establish screen size, resolution, orientation, browser type, etc
+        <br />
+        <br />
+        Media Type; <br />
+        @media all - (All devices)<br />
+        @media print - (Printing the webpage only)<br />
+        @media screen - (Computer Screens only) <br />
+        @media speech - (For speech synthesizers) <br />
+        @media only "" - (Hides media query from older browers) <br />
+        <br />
+
+        Ex; <br />
+        &lt;link href="something.css" rel="stylesheet" media="only screen and
+        (min-width:768px) and (max=width:1024px)"> <br /><br />
+        (The (min-width:768px) Act as Boolean Conditions just like JS - If
+        false, it wont run) <br />
+        something.css is only referenced when; <br />
+        Using a new browser, <br />
+        Viewing from a computer screen <br />
+        That is bigger than 768px <br />
+        And small then 1024px <br />
+        <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Flexible Images</h2>
+      <p>
+        Flexible images with CSS. <br />
+        To ensure that images are sufficient in both desktop and mobile useage.
+        <br />
+        Remove height and width attributes from image properties <br />
+        Set max-width:100%; <br />
+        Set height:auto; (To maintain aspect ratio) <br />
+        <br />
+
+        A static image will retain its hard-coded size regardless <br />
+        400px on desktop = small | 400px on mobile = huge! <br /><br />
+        static image { <br />
+        height:400px; <br />
+        width: 400px; <br />
+        } <br />
+        <br />
+
+        A fluid image has an ambiguous size, adapting to its surroundings.
+        <br />
+        100% of width on desktop = huge! | 100% of width on mobile = huge!
+        <br />
+        <br />
+        fluid image { <br />
+        height:auto; <br />
+        width: 100%; <br />
+        } <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Picture Element</h2>
+      <p>
+        The &lt;picture> element allows developers to serve different images
+        <br />
+        based on specific criteria. (Bigger screen gets image A, smaller screen
+        gets image B) <br />
+        srcset="" = Default image source <br />
+        <br />
+
+        &lt;picture> <br />
+        &lt;source srcset="/media/cc0-images/surfer-240-200.jpg"<br />
+        media="(min-width: 800px)"><br />
+        &lt;img src="/media/cc0-images/painted-hand-298-332.jpg" alt="" /><br />
+        &lt;/picture><br /><br />
+        This picture tag sets the source (srcset="") to a default image <br />
+        Then changes the source (src) when a condition is true (min-width:
+        800px) <br />
+        Effectively serving two different images depending on the screen size.
+        <br />
+      </p>
+      <br />
+    </div>
+
+    <div>
+      <h2>Testing Mobile Display</h2>
+      <p>
+        Google Dev Tools <br />
+        Publish Site and test on moblie (duh?) <br />
+        Opera Mobile Emulator <br />
+        iPhone Emulator <br />
+        iPadPeek <br />
+      </p>
+      <br />
+    </div>
+  </body>
+</html>
