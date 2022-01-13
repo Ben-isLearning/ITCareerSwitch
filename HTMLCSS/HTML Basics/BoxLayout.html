@@ -419,14 +419,58 @@
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Styling Multiple Lines of Flexbox ~ align-content:</h2>
+      <p>The align-content: property aligns multiple lines of items within a flexbox. <br> 
+        I dont plan to use these - I might change my mind. <br> <br>
+      align-content: flex-start; <br>
+      align-content: flex-end;<br>
+      align-content: center;<br>
+      align-content: space-between;<br>
+      align-content: space-around;<br>
+      align-content: space-evenly;<br>
+      align-content: stretch; <br>
+      align-content: start; <br>
+      align-contnet: end; <br>
+      align-content: baseline;<br><br>
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Give Them some space - gap:</h2>
+      <p>The gap: property explicitly controls the space between flex items. <br>
+      gap: 10px;    (With one value, it controls entire gap top, and sides)<br>
+      gap 10px 20px; (With 2 values, it controls row, then column)  <br>
+      row-gap: 10px;  (or long-hand with 1 value)<br>
+      column-gap: 20px;  (or longhand with 1 value)<br>
+    </p>
+    <br>
+    <div style="height:50px; gap:20px; display: flex; border: 1px solid green; width: 60%">
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+    </div>
+    <br>   
+    <div style=" height:50px; column-gap:50px; display: flex; border: 1px solid green; width: 60%">
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+    </div>
+    <div style="align-content: space-around; height:150px; column-gap: 20px; row-gap:20px; flex-wrap:wrap;  display: flex; border: 1px solid green; width: 60%">
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      <div style="flex: 1; border: 1px solid red">Hello</div>
+      <div style="flex: 2; border: 1px solid red">I am a</div>
+      <div style="flex: 1; border: 1px solid red">Boxxy Box!</div>
+      </div>
+ 
       <br />
     </div>
   </body>
