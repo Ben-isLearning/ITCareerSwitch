@@ -12,12 +12,13 @@
     <div>
       <h2>Forms are everywhere</h2>
       <p>
-        Any instance of a user inputting data on a website is handled by a form.
+        Any instance of a user inputting data on a website is acheived through
+        use of a form.
         <br />
-        Signing up for something <br />
-        signing in <br />
-        sending an email <br />
-        literally anything you're inputting! <br />
+        Inputting your name into an account? input! <br />
+        signing in with an email address? input! <br />
+        sending an email? input! <br />
+        literally anything you're entering. Input! <br />
         Any time you hit submit button after entering data, Its a form!
         <br /><br />
         Forms consist of HTML code on the front, and server-side data processing
@@ -51,26 +52,79 @@
     <div>
       <h2>Form element ~ &lt;form></h2>
       <p>
-        Forms consist of 5 attributes; <br />
+        The form element has of 5 attributes; <br />
         action - (the url or filename/path to the server) <br />
         autocomplete - (???) <br />
-        id - (provide unique id) <br />
-        method - (required - The fuction) <br />
+        id - Allows CSS Manipulation <br />
+        method - The fuction of the form (get / set / etc )) <br />
         name - (RegForm / OrderForm / Meaningful name) <br />
         <br />
         syntax: <br />
         &lt;form name="orderForm" method="post" id="orderForm"
         action="processData.php"> <br />
         Best practice Name ==== Id <br />
+        <br />
+        Inside the form element, we require both the input element, <br />
+        (That sets the type and allows the input) <br />
+        and the label element, <br />
+        (That shows the user what the input is for) <br />
+        lable.for ==== input.name
       </p>
       <br />
     </div>
 
     <div>
-      <h2>Form Controls</h2>
+      <h2>Form Controls / &lt;input> element</h2>
       <p>
-        Places on the form that allows for user control <br />
-        input field <br />
+        &lt;input> element attributes; <br />
+        type="" - Sets type of input field<br />
+        name="" - Sets name of input <br />
+        id="" - Allows CSS Manipulation <br />
+        value="" - Sets default value <br />
+        accesskey="" - (Hotkey) Allows form-field to be selected via hotkey
+        <br />
+        tabindex="" - Order of advancement (Stop TAB going everywhere
+        (Starts@1)) <br />
+        checked - Boolean value - Sets an input field to be checked by default
+        <br />
+        disabled - Boolean Value - disables an input field entirely (no user /
+        server)
+        <br />
+        readonly - Boolean Value - Restricts user input - Still active <br />
+        autofocus - Boolean Value - Sets form field to be focused by default
+        <br />
+        required - Boolean Value - Requires user input (Basic validation) <br />
+
+        <br />
+        <strong>Submit <br /></strong>
+        Used to submit or begin executing the method="" <br />
+        &lt;input type="submit"> The &lt;input> element places a user control on
+        the form <br />
+        <br />
+        <strong>Reset <br /></strong>
+        Used to clear the form - effectively reset all feilds. <br />
+        &lt;input type="reset"> <br />
+        <br />
+        <strong>Check Box <br /></strong>
+        Used to select one or more options - can be unchecked <br />
+        &lt;input type="checkbox"> <br />
+        <br />
+        <strong>Radio Button</strong> <br />
+        Used to select one choice out of multiple options. <br />
+        (All options need to have the same name="" attribute) <br />
+        &lt;input type="radio"> <br />
+        <br />
+        <strong>Hidden input</strong> <br />
+        Used to store information that is not visible in the viewport <br />
+        THIS DATA CAN STILL BE ACCESSED VIA DEV-TOOLS <br />
+        &lt;type input="hidden"> <br />
+        <br />
+        <strong>Password Input <br /></strong>
+        Same as text box, but the characters are obscured. <br />
+        &lt;type input="password"> <br />
+        <br />
+
+        input fields... &lt;input <br />
         radio button <br />
         check boxs <br />
         buttons <br />
