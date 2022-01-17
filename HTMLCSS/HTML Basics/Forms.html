@@ -81,8 +81,12 @@
         name="" - Sets name of input <br />
         id="" - Allows CSS Manipulation <br />
         value="" - Sets default value <br />
+        placeholder="" - Acts like value="", but text disappears when selected.
+        <br />
         accesskey="" - (Hotkey) Allows form-field to be selected via hotkey
         <br />
+        wrap="" - configures line breaks within text fields. <br />
+        (Soft = linebreak @ border / Hard = linebreak @ row="" value) <br />
         tabindex="" - Order of advancement (Stop TAB going everywhere
         (Starts@1)) <br />
         checked - Boolean value - Sets an input field to be checked by default
@@ -90,11 +94,19 @@
         disabled - Boolean Value - disables an input field entirely (no user /
         server)
         <br />
+        multiple - Boolean Value - Allows user to select more than one option
+        <br />
         readonly - Boolean Value - Restricts user input - Still active <br />
         autofocus - Boolean Value - Sets form field to be focused by default
         <br />
         required - Boolean Value - Requires user input (Basic validation) <br />
-
+        maxlength="" - Validation - Sets maximum character length allowance
+        <br />
+        minlength="" - Validation - Sets minimum character length allowance
+        <br />
+        max="" - Validation - Sets maximum value for numeric fields. <br />
+        min="" - Validation - Sets minimum value for numeric fields. <br />
+        list="" - Operates like for===Id, but for multiples list===id <br />
         <br />
         <strong>Submit <br /></strong>
         Used to submit or begin executing the method="" <br />
@@ -119,38 +131,143 @@
         THIS DATA CAN STILL BE ACCESSED VIA DEV-TOOLS <br />
         &lt;type input="hidden"> <br />
         <br />
-        <strong>Password Input <br /></strong>
+        <strong>text </strong> <br />
+        Form field that allows users to type into <br />
+        &lt;type input="text"> <br />
+        <br />
+        <strong>password Input <br /></strong>
         Same as text box, but the characters are obscured. <br />
         &lt;type input="password"> <br />
         <br />
-
-        input fields... &lt;input <br />
-        radio button <br />
-        check boxs <br />
-        buttons <br />
-        email <br />
-        urls <br />
-        dates <br />
-        times <br />
-        date selection <br />
+        <strong>textarea</strong> <br />
+        Form field that allows users to type into, much like type="text", but we
         <br />
+        can set the character limit (Effectively the size of the box) <br />
+        attributes used to set character limits; cols="" and rows="" <br />
+        character limit = cols X rows <br />
+        &lt;textarea cols="50" rows="4"> comments here &lt;/textarea> <br />
+        (50 x 4 = Text area allowing 200 characters.) <br />
+        <br />
+        <strong>select (from these options) <br /></strong>
+        Used to select an option from a dropdown menu of options <br />
+        &lt;select> &lt;option> &lt;option> &lt;/select> <br />
+        <br />
+        <strong>option <br /></strong>
+        Used within the &lt;select> element to provide options to select from.
+        <br />
+        &lt;option value="1">Value one &lt;/option> <br />
+        <br />
+        <strong>&lt;button> <br /></strong>
+        Used to create a point of action ~ Click the button, something happens.
+        <br />
+        &lt;button type="submit"> Submit &lt;/button><br />
+        <br />
+        <strong>Email <br /></strong>
+        form field that allows users to input email (Contains basic validation)
+        <br />
+        &lt;input type="email"> <br />
+        <br />
+        <strong>URL </strong> <br />
+        form field that allows input of url (Contains basic validation) <br />
+        &lt;input type="url"> <br />
+        <br />
+        <strong>Telephone Number</strong> <br />
+        allows the input of phone numbers (Contains basic validation) <br />
+        &lt;input type="tel"> <br />
+        <br />
+        <strong>Search </strong> <br />
+        Allows user to search for item <br />
+        &lt;input type="search"> <br />
+        <br />
+        <strong>Data Lists</strong> <br />
+        <a
+          href="file:///C:/Users/BenWi/Desktop/Learn%20To%20Code!/CWM/The%20Ultimate%20HTML5%20&%20CSS3%20Part2/The%20Ulitmate%20HTML%20+%20CSS%20pt2/lesson35.html"
+          >Here is good resource</a
+        >
+        <br /><br />
+        <strong>Sliders <br /></strong>
+        <a
+          href="file:///C:/Users/BenWi/Desktop/Learn%20To%20Code!/CWM/The%20Ultimate%20HTML5%20&%20CSS3%20Part2/The%20Ulitmate%20HTML%20+%20CSS%20pt2/lesson38.html"
+          >Here is good resource</a
+        >
+        <br /><br />
 
-        The input element is a self contained tag <br />
-
-        type="text" | type="file" | type="radio" | type=
+        <strong>Color <br /></strong>
+        &lt;input type="color"> <br /><br />
       </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Form Controls Accessability</h2>
+      <p>
+        If we just left an empty input field on a webpage, a user wouldn't
+        <br />
+        inately know what data the webpage is asking for. <br />
+        As such, we need to include accessiblity options to our forms. <br />
+        <br />
+        <strong>Label element</strong> <br />
+        the label element is used to provide associated text to go along with
+        <br />
+        an input field. <br />
+        Option 1 <br />
+        Link the input and the label elements by matching <br />
+        the Id="" of the input <br />
+        and the for="" of the label <br /><br />
+        Standard Ex: <br />
+        &lt;label for="nameInput"> Name here &lt;/label> <br />
+        &lt;input type="text" id="nameInput"> <br />
+        <br />
+        <label for="nameInput"> Name here </label>
+        <input type="text" id="nameInput" />
+        <br /><br />
+        For increased accessability: put everything in the label, <br />
+        then the padding can be clicked to access the input element.
+        <br /><br />
+        <br />
+        <label
+          style="
+            border: 1px solid blue;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+          "
+          for="nameName"
+          >Name here pls<input type="text" id="nameName"
+        /></label>
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Server-side Processing</h2>
+      <p>
+        Consists of a request of some sort from the web browser <br />
+        the request is processed (Get / Set / Etc) <br />
+        and the server returns requested information <br />
+        <br />
+        Much like PersonA asks "whats the time?" <br />
+        PersonB responds "Mid day" <br />
+        then PersonA knows what time time is. <br /><br />
+
+        Examples of server-side procesing languages <br />
+        php <br />
+        ruby on rails <br />
+        <br />
+
+        Server-side processing is <br />
+        (Functionality) set up by the "method" attribute within the &lt;form>
+        element. <br />
+        (File Path) triggered by the "action" attribute within the &lt;form>
+        element. <br />
+        <br />
+        Method attribute defines how to send form-data. <br />
+        Action attribute defines where to send form-data <br /><br />
+        Example; <br />
+        &lt;form method="post" action="www.something.net/scripts/Add.php">
+        <br />
+        Will Post data to the add.php function
+      </p>
       <br />
     </div>
 
