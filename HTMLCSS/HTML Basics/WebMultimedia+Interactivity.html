@@ -5,6 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .example {
+        background-color: thistle;
+      }
+
+      .example:hover {
+        background-color: white;
+      }
+
+      .flexBox {
+        display:flex;
+        width: 90%;
+      }
+
+      .flexItem {
+        height: 150px;
+        width: 150px; 
+        margin: 5px;
+        background-color: wheat;
+      }
+
+      .flexItem:hover {
+        border: 5px solid brown;
+      }
+
+      .alpha1:hover {
+        transform: rotate(45deg)
+          }
+          
+      .alpha2:hover {
+        transform: rotate(-45deg)
+      }
+      
+      .alpha3:hover {
+        transform: rotateX(45deg);
+      }
+      
+      .alpha4:hover {
+        transform: rotateY(45deg);
+      }
+      
+      .alpha5:hover {
+        transform: rotate(180deg); 
+      }
+
+      .beta1:hover {
+        transform: scale(0)
+          }
+          
+      .beta2:hover {
+        transform: scale(2)
+      }
+      
+      .beta3:hover {
+        transform: scale(1.5);
+      }
+      
+      .beta4:hover {
+        transform: scale(1);
+      }
+      
+      .beta5:hover {
+        transform: scale(1.1); 
+      } 
+
+    .transition {
+      transform:scale(1);
+      margin:auto;  
+    }
+    .transition:hover {
+      transform:scale(4);
+      transition-duration: 5s;
+      transition-property: transform;
+    }
+
+    </style>
   </head>
   <body>
     <h1>Web Multimedia + Interactvity</h1>
@@ -23,25 +102,12 @@
     </div>
 
     <div>
-      <h2>Providing Audio/Visual</h2>
-      <p>
-        (Add in Accesability Options too) <br />
-        1) Provide a hyperlink that loads + plays. <br />
-        2) Adobe Flash - 3rd party Product - .swf <br />
-        3) &lt;audio> element for audio <br />
-        4) &lt;video> element for videos. <br />
-        Find the middle ground between file size and quality. <br />
-        Not too big, but still sounds good, is optimum <br />
-      </p>
-      <br />
-    </div>
-
-    <div>
       <h2>&lt;audio> &lt;/audio></h2>
       <p>
         used to embed sound content in HTML documents. <br />
         audio attributes: <br />
-        src="" ~ sets source file <br />
+        src="" ~ sets source file | use &lt;source> element for multiples.
+        <br />
         type="" ~ Tells the browser what the filetype is (prevent loading to
         fail) <br />
         (Aux Text) ~ set text inside the audio tag with error mesage, just in
@@ -53,57 +119,206 @@
         preload ~ (none | metadata | auto) ~ How file is received preemptively
         <br />
         none / only download metadata / download all <br />
-        title="" ~ Accessability purposes - provides title <br />
+        title="" ~ Accessability purposes - provides a title <br />
         <br />
+        for Single file implementation,<br />
         <audio controls src="audio.mp3">
           Your browser does not support the audio elemenet.
         </audio>
         <br />
+
         &lt;audio controls src="whatever.mp3"> Your browser does not support the
-        audio elemenet. &lt;/audio>
+        audio element. &lt;/audio> <br />
+        <br />
+        <br />
+        For Multiple file implmentation, <br />
+        <audio controls>
+          Your browser does not support the audio element.
+          <source src="alpha.mp3" type="audio/mp3" />
+          <source src="alpha.ogg" type="audio/ogg" />
+        </audio>
+        <br />
+        &lt;audio controls> <br />
+        Your browser does not support the audio element.<br />
+        &lt;source src="alpha.mp3" type="audio/mp3" /><br />
+        &lt;source src="alpha.ogg" type="audio/ogg" /><br />
+        &lt;/audio><br />
+
+        <br />
       </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>&lt;video> &lt/video></h2>
+      <p>
+        used to embed a media player which supports video playback into the
+        document. <br />
+        video attributes: <br />
+        autoplay ~ Boolean Value ~ Sets video element to play as soon as it can.
+        <br />
+        controls ~ Boolean Value ~ Enables user controls for the video <br />
+        loop ~ Boolean Value ~ Sets video to loop <br />
+        muted ~ Boolean Value ~ Sets video to play but silently <br />
+        poster="" ~ Sets a poster/thumbnail to show while the video loads <br />
+        src="" Source attribute - sets source of video | &lt;source> if multiple
+        sources. <br />
+        height="" ~ Sets height of video - must be absolute value in px. <br />
+        width="" ~ sets width of video - must be absoute value in px. <br />
+        preload="" ~ none | meta | auto | ~ Preemptively load nothing, some, or,
+        all. <br />
+        title="" ~ breif discription for accessibility. <br />
+        <br />
+
+        <video src="video.mp4" controls height="300px" width="400px;">
+          Your browser does not support the video element.
+        </video>
+        <br />
+        <br />
+        &lt;video src="video.mp4" controls height="300px" width="400px;"> <br />
+        Your browser does not support the video element. <br />
+        &lt;/video> <br />
+      </p>
+      <br />
+    </div>
+
+    <div class="example">
+      <h2>CSS3 and Interactivity</h2>
+      <p>
+        Psuedo Classes <br />
+        A psuedo class is a keyword added onto a selector that specifies a
+        particular state <br />
+        <br />
+        Ex ~ <br />
+        <strong>.example {background-color: blue;} <br /></strong>
+        In its regular state, .example is blue. <br />
+        <strong>.example:hover {background-color: green;} <br /></strong>
+        When its being hovered over (in its hovered state) .example is green.
+        <br />
+        Full list
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+        >
+          Here</a
+        >
+        <br />
+        <br />
+        User action psuedo-classes; :hover | :active | :focus | :focus-visible |
+        :focus-within
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>CSS3 - Transform + Transition</h2>
+      <p>
+        transform: Defines the movement of element from A to B <br />
+        transition: Defines delay, duration, What is moving, + the timing of said movement. <br />
+        <br />
+        transform: rotate(xxdeg) <br />
+        + Rotates right | - Rotates Left. <br />
+        By default, rotation happens around the middle of an Axis. <br /> <br>
+        <div class="flexBox">
+          <div class="flexItem alpha1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+          <div class="flexItem alpha2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+          <div class="flexItem alpha3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum. (Rotate X doesn't work w/o 3d)</div>
+          <div class="flexItem alpha4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum. (Rotate Y doesn't work w/o 3d)</div>
+          <div class="flexItem alpha5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+        </div>
+        <br>
+        <br>
+        transform: scale (x) <br>
+        Number represents scale factor of growth. <br>
+        <div class="flexBox">
+          <div class="flexItem beta1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.  <br> 0 = Dissapear!</div>
+          <div class="flexItem beta2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+          <div class="flexItem beta3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+          <div class="flexItem beta4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+          <div class="flexItem beta5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+        </div>
+        <br><br>
+
+        transition-delay: 1s;  ~ Sets delay before transition begins. <br>
+        transition-duration:  2s; ~ Sets duration of transition from A to B. <br>
+        transition-property: xxx; ~(Blank for all) Sets property/ies to transition. <br>
+        transition-timing-function: (Keyword) linear; ~ sets time-path of  A to B <br> <br>
+        only requires transition-property + transition-duration to function. <br> 
+        <br>
+        <div class="flexBox">
+          <div class="flexItem transition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, nostrum.</div>
+        </div>
+        <br><br>
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>&lt;details> + &lt;summary> Elements</h2>
+      <p>the details element creates a disclosure widget. (State: closed or open) <br>
+        Default state is Closed - which shows the &lt;summary> element. <br>
+        toggled (by clicking), it changes state to Open, showing the full text <br>
+        Inside the details element. <br>
+        tl;dr spoiler boxes + spoiler text. <br>
+
+        <details style="width:40%">
+          <summary>Summary: Click here for more!</summary>
+          Game of Thrones final season was a crock of rubbish - <br>  these are the full details. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos, veritatis non laudantium quas ratione velit ab magni quae unde? 
+        </details>
+        <br>
+        <br>
+        &lt; details > <br>
+        &lt;summary>Summary: Click here for more!&lt;/summary> <br>
+          Game of Thrones final season was a crock of rubbish - <br>  these are the full details. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos, veritatis non laudantium quas ratione velit ab magni quae unde? 
+          &lt;/details>
+      </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>Programming Languages</h2>
+      <p>Java | Javascript | Ajax | JQuery </p>
+      <p><strong>Java </strong>- (Currently No2 Language in the world - (Jan-2022)) <br> 
+       Used to make Applets. - Will run on anything  <br>
+       Object Oriented Programing (OOP) <br> 
+      Java =/= JavaScript <br>
+      Saved as .class <br>
+      <br>
+      <p><strong>JavaScript</strong>(Currently No3 Language in the world - (Jan-2022)) <br>
+        Used to create additional interactivity on a webpage <br>
+        This is a client-side scipting language. <br>
+        Object Oriented Programming (OOP) <br>
+        Javascript =/= Java <br>
+        Saved as .js <br>
+      </p>
+      <p><strong>JQuery</strong> (Not a language - Just a library) <br>
+        JQuery is an API <br>
+        Used to insert pre-coded functional javascript onto websites. <br>
+        Does a whole bunch of things. <br>
+
+      </p>
+    </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>HTML5 APIs (Application Programing Interface)</h2>
+      <p>Geolocaton API; <br> "xxx wants to know your loction"  <br>
+      Really good functionality used in alot of websites. <br><br>
+      Web Storate APi; <br>
+      developers use cookies to store information on the client side <br>
+      localStorage - stores data W/O expiration data. <br>
+      sessionData - stores data as long as session remains active. <br>
+      <br>
+      Offline Web Applications API;
+    </p>
       <br />
     </div>
 
     <div>
-      <h2></h2>
-      <p></p>
-      <br />
-    </div>
-
-    <div>
-      <h2></h2>
-      <p></p>
+      <h2> &lt;canvas> element </h2>
+      <p> element is used to draw graphics, on the fly, via JavaScript.  <br>
+        <a href="https://www.w3schools.com/html/html5_canvas.asp">More Here</a>
+      </p>
       <br />
     </div>
 
