@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <h1>JavaScript + JQuery</h1>
@@ -83,14 +84,80 @@
     <div>
       <h2>Form Handling</h2>
       <p>
-        Form validation - Create if/else logic behind form inputs <br />
+        Form validation - Create if/else logic behind form submit button <br />
+        form onsubmit="myScript()"; <br />
+        To validate the input data on the client-side to free up processing
+        capacity on the server-side <br />
+
+        <br />
         <br />
       </p>
     </div>
     <div>
-      <h2></h2>
-      <p></p>
+      <h2>JQuery</h2>
+      <p>
+        jQuery - open source library <br />
+        Why buy a book when you can check one out of a library? <br />
+        Why code your own function if it already exists? <br />
+        **Can take library function and ammend for our purposes** <br />
+        Library is stored in .js <br /><br />
+        Can install JQuery locally or by Content Delivery Networks (CDN).
+        <br /><br />
+        jQuery uses CSS Selectors to latch onto elements. <br />
+        $('simple-li') <br />
+        <br />
+        Whereas standard JavaScript latches onto the actual elements. <br />
+        document.getElementsByClassName("simple-li"); <br />
+        <br />
+        Universal; <br />
+        $(document)
+      </p>
     </div>
+    <div>
+      <h2>jQuery Selectors (CSS)</h2>
+
+      <p>
+        Selectors are used to identify what particular DOM element is to be
+        targeted <br />
+        by the following codeblock. <br />
+        CSS : .className { color:red;}<br />
+        jQe : $(".classname").css("color", "red"); <br />
+        (This would be poor implementation, but serves as a side-by-side
+        comparison ) <br /><br />
+        CSS : * {xxx} (Universal Selector) <br />
+        jQe : $("*") <br />
+        <br />
+        CSS : #idSausage {xxx} (Id Selector) <br />
+        jQe : $("#idSausage")
+        <br /><br />
+        Full list of selectors
+        <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp"
+          >Here!</a
+        >
+        <br />
+        But with Object-oriented programming, I don't believe I will need to
+        learn all of these... (I may be wrong) <br />
+      </p>
+    </div>
+
+    <div>
+      <h2>jQuery Methods</h2>
+      <p>
+        Methods are used to act upon particular DOM element(s) <br />
+        Methods work with CSS, Effects, Events, Forms, etc. <br />
+        Full list of methods
+        <a href="https://www.w3schools.com/jquery/jquery_ref_html.asp"
+          >Here!
+        </a>
+        <br /><br />
+        Popular methods; <br />
+        attr() ~ Gets or Sets an attribute of a selected element. <br />
+        click() ~ Binds a jQuery event to the JavaScript event handler. <br />
+        css() ~ sets CSS properties in JavaScript (No - No! ) <br />
+        htmml() ~ Gets or Sets content for selected elements. <br />
+      </p>
+    </div>
+
     <div>
       <h2></h2>
       <p></p>
