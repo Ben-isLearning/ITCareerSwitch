@@ -1,0 +1,3 @@
+Python doesnt work with "Code runner" 
+Disable Code Runner to enable python to be executed within VS Code. 
+Don't forget to re-enable when going back to JS
