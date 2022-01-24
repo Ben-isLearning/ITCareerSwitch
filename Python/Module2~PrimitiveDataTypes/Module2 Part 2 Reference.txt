@@ -77,3 +77,12 @@ lowerString = upperString.lower()
 
 print(lowerString)
 lowerString = i want to ride a biscuit
+
+Concatenation (Adding strings to strings) 
+
+firstString = "i want to ride a biscuit"
+comedyString = "Yeah!" 
+
+lyrics = firstString + ", " + firstString + ", " + firstString + ", " + comedyString 
+
+print(lyrics)
