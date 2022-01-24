@@ -12,6 +12,7 @@ Short but descriptive.
 Syntax Error ~ Miss typed something 
 Logic Error ~ incorrect computations 
 
+Focusing on float / int... 
 
 Primitive Data Types 
 int     Integer         (-2 | 123 | 23123123)               (Whole Numbers)       (Number in JS)

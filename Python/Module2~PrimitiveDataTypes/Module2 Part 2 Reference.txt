@@ -1,0 +1,79 @@
+Working With Primitive Data types;
+
+Primitive Data - Simplest forms of representing data 
+(Non-Primitive Data is designed to organise and manage sets of primitive data) 
+
+Rules to abide by; 
+Names only contain Letters or _         
+Not Allowed Spaces
+Not Allowed keywords / function names 
+Short but descriptive.                  
+
+Syntax Error ~ Miss typed something 
+Logic Error ~ incorrect computations 
+
+Focusing on string - 
+
+Primitive Data Types 
+int     Integer         (-2 | 123 | 23123123)               (Whole Numbers)       (Number in JS)
+float   Float           (12.12 | 0.1 | 1231.123)            (Fractional Number)   (Number in JS)
+str     String          ("characters")      (String in JS)
+Bool    Boolean         (True/False)        (Boolean in JS)
+
+Declaring a string ~ 
+Python: varString = "text" 
+Python: varString2 = 'text' 
+
+JS :    let varString = "text"
+JS :    let varString2 = 'text' 
+
+
+Declare: 
+stringOne ="hello" 
+stringTwo = stringOne       
+# stringTwo has been declared as the current value of stringOne#
+
+print(stringOne)
+print(stringTwo)
+
+stringOne ="i am different" 
+print(stringOne)
+print(stringTwo)
+
+# stringTwo has not been re-declared  #
+
+
+Methods? 
+What is a method?
+A Method is an action that python can perform on a piece of data.
+method() 
+
+
+title() 
+The title() method returns a string where the first character 
+in every word is upper case. Like a header, or a title.
+
+firstString = "i want to ride a biscuit"
+newString = firstString.title()
+
+print(newString)
+newString = I Want To Ride A biscuit
+
+
+upper()
+The upper() method returns a string where all characters are in upper case.
+
+firstString = "i want to ride a biscuit"
+upperString = firstString.upper()
+
+print(upperString)
+upperString = I WANT TO RIDE A BISCUIT
+
+
+lower()
+The lower() method returns a string where all characters are lower case.
+upperString = "I WANT TO RIDE A BISCUIT"
+lowerString = upperString.lower()
+
+print(lowerString)
+lowerString = i want to ride a biscuit
