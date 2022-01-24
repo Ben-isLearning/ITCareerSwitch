@@ -1,0 +1,52 @@
+Working With Primitive Data types;
+
+Primitive Data - Simplest forms of representing data 
+(Non-Primitive Data is designed to organise and manage sets of primitive data) 
+
+Rules to abide by; 
+Names only contain Letters or _         
+Not Allowed Spaces
+Not Allowed keywords / function names 
+Short but descriptive.                  
+
+Syntax Error ~ Miss typed something 
+Logic Error ~ incorrect computations 
+
+
+Primitive Data Types 
+int     Integer         (-2 | 123 | 23123123)               (Whole Numbers)       (Number in JS)
+float   Float           (12.12 | 0.1 | 1231.123)            (Fractional Number)   (Number in JS)
+str     String          ("characters")      (String in JS)
+Bool    Boolean         (True/False)        (Boolean in JS)
+
+
+Declaring a variable, super simple xxxx = "input data" 
+Python:     intVariable = 3 
+JS:         let intVarable = 3 
+
+print()
+print("" | 123 )
+The print() function prints the specified message to the screen, or other standard output device.
+
+print("Hello World!")
+
+
+isinstance() 
+isinstance(object, type)
+The isinstance() function returns True if the specified object 
+is of the specified type, otherwise False.
+
+isinstance (5, int)
+isinstance (5.55, float)
+isinstance ("123", str )
+isinstance (True, bool)
+
+
+float()
+float(str | int )
+The float() function converts the specified value into a floating point number.
+
+float("33")
+float(33) 
+
+
