@@ -78,11 +78,26 @@ lowerString = upperString.lower()
 print(lowerString)
 lowerString = i want to ride a biscuit
 
+
 Concatenation (Adding strings to strings) 
 
 firstString = "i want to ride a biscuit"
 comedyString = "Yeah!" 
-
 lyrics = firstString + ", " + firstString + ", " + firstString + ", " + comedyString 
-
 print(lyrics)
+name = "dave"
+age = 40 
+print(name + " Age " + age)
+"TypeError: can only concatenate str (not "int") to str"
+
+
+To overcome abnormal user input, python uses 3 methods to strip whitespace
+
+strip()
+lstrip()
+rstrip() 
+
+userInput = "        socks            " 
+print(userInput.strip()) 
+
+
