@@ -1,0 +1,25 @@
+a List is a data structure in Python that is a changeable ordered sequence of elements. 
+
+"Variable on steroids" 
+
+Each element within a List, is refered to as an item.
+lists are defined by having values between square brackets. 
+From here on out, list will be typed as []
+
+[] are fantastic for multiple replated values. 
+
+courses = ["HTML", "CSS", "JavaScript", "Python"]
+
+Each item has an index, starting @ 0. 
+courses[0] = "HTML"
+courses[1] = "CSS"
+courses[2] = "JavaScript"
+courses[3] = "Python"
+
+(Or from the back)
+
+courses[-4] = "HTML"
+courses[-3] = "CSS"
+courses[-2] = "JavaScript"
+courses[-1] = "Python"
+
