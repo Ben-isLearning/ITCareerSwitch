@@ -1,0 +1,14 @@
+Convering Types in Python... 
+
+Method: Turn this (...) into an integer
+
+int()
+
+int(10.00)  >>> 10
+
+
+Method: Turn this (...) into a float
+
+float()
+
+float(22)  >>> 22.0

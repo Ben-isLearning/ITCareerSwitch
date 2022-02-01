@@ -1,0 +1,13 @@
+Multiple Assignment allows us to assign multiple variables
+ at the same time, in the same line! 
+
+a, b = 5, 10 
+or
+(a, b) = (5, 10)
+
+Multiple Assignment allows us to assign a single value to 
+multiple variables at the same time, in the same line! 
+
+a = b = c = 3       (A | B | C = 3)
+
+Instructor Mentions For loops - Doesn't explain, only Question in practice. 
