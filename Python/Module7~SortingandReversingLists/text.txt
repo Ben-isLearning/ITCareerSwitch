@@ -1,0 +1,12 @@
+Sorting and Reversing 
+
+The sort method in the list ascending by default ( A, B, C Etc)
+
+alphabet = ["beta", "gamma", "omega", "alpha"]
+alphabet.sort()
+
+
+Or in reverse order 
+
+alphabet = ["beta", "gamma", "omega", "alpha"]
+alphabet.sort(reverse=True)
