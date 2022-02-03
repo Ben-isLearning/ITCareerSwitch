@@ -1,0 +1,24 @@
+Slicing Lists 
+
+Looking at certain things within Lists. 
+
+Can be used with Lists, Tuples or Custom Data Structures. 
+
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+shopping[x:y] x = Starting Index : y = Ending Index
+
+shopping[1:3]  (Start @1st index : End Before @3rd index) 
+shopping[1:7:2]  (Start @1st index : End Before @7th index : Count in increments of 2) 
+
+
+(Would Print ~  Milk Eggs)
+
+
+people = ["tom", "dick", "harry"]
+
+print("The name is...") 
+for person in people[:2]}
+    print(person.title())
+
+
+people = ["tom", "dick", "harry", "tom", "dick", "harry", "tom", "dick", "harry"]
