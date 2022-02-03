@@ -1,0 +1,35 @@
+Types of Operators: 
+
+Arithmetic | Assignment | Comparison | Logical | Identity | Membership | Bitwise 
+
+Arithmetic (Math):
+
++   Addition        a + b
+-   Subtraction     a - b 
+*   Multiplication  a * b 
+/   Division        a / b
+**  Exponential     a ** b  (a ^ b)
+%   Modulus         a % b   (Remainder of a / b) 
+
+
+
+Assignment (Assigning Value): 
+
+=      Equals                       a = 1
++=     Add Value Equal to           a += 3 
+-=     Sub Value equal to           a -= 3
+*=     Multiply by Value            a *= 2
+/=     Divide by value              a /= 3
+**=    ^ by value                   a **= 3 
+
+
+
+
+
+Comparison
+Logical
+Identity
+Membership
+Bitwise
+
+

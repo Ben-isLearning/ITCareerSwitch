@@ -1,0 +1,20 @@
+Types of Operators: 
+
+Arithmetic | Assignment | Comparison | Logical | Identity | Membership | Bitwise 
+
+
+Comparison (Compare X with Y):
+
+==      Equal to        a == b
+!=      NOT equal to    a != b
+>       Greater Than    3 > 2
+<       Less Than       3 < 4 
+>=      GT or equal to  a >= 3 
+<=      LT or equal to  a <= 10
+
+
+Logical ( Combine two comparison statements)
+
+and     True if both statements are true        10 < 100 and 10 > 1 
+or      True if a single statmenet is true      10 < 100 or 10 = 100
+not     Reverses the state of the operand       not(10 < 100 and 10 > 1)

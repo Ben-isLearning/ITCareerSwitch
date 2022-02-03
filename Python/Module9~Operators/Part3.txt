@@ -1,0 +1,56 @@
+Types of Operators: 
+
+Arithmetic | Assignment | Comparison | Logical | Identity | Membership | Bitwise 
+
+Identity (Disregard values - Look at variable): 
+
+is          True if both are the same       a is b 
+is not      True if both are NOT the same   a is not c 
+
+
+
+Membership (Does x exist in y) / (Does x not (exist) in y): 
+
+in          True if value is present in the object          a   in alphabet  
+not in      True if value is not present in the object      123 in alphabet
+
+
+
+Bitwise (Binary 1s and 0s): 
+
+%           Bitwise AND         
+|           Bitwisee OR
+^           Bitwise XOR (Set to 1 if only single value is 1)
+
+**bin()
+Function to convert integer into binary. 
+
+In Python, binary starts with "0b" - then the number
+Binary consists of 8 digits
+alpha = 101 =  01100101  (0b1100101)
+beta  = 042 =  00101010  (0b101010)
+
+
+
+& Checks for existence of 1 at the same places;
+
+A)  01100101
+B)  00101010
+
+&)  00100000  (32 in regular)
+
+
+
+| Checks for existence of 1 at either places; 
+A)  01100101
+B)  00101010
+
+|)  01101111 (111 in regular)
+
+
+
+^ Checks for the existence of a 1 in a single place per value; 
+A)  01100101
+B)  00101010
+
+^)  01001111  (79 in regular)
