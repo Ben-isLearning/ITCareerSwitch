@@ -1,0 +1,68 @@
+Modify Lists 
+
+Adding + Taking away 
+
+We can use indexing to change items within the list! 
+By setting the index number to a different value; 
+
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+shopping[0] = 'Coffee' 
+print(shopping)
+
+
+Adding items onto the end of Lists with + operator 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+shopping = shopping + ['Coffee']
+
+print (shopping)
+
+
+
+Adding items in a particular place  with .insert(i,x)  i = index, x = value 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+shopping.insert(1, 'Coffee') 
+
+print(shopping)
+
+
+
+Removing items in a particular place with .del[i] i = index 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+del shopping[2]
+
+print(shopping)
+
+
+
+Removing KNOWN values in a list with .remove(x)  x = value 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+shopping.remove('Generic') 
+
+print(shopping)
+
+
+
+Printing Lists and Lists with + operator 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+moreShopping = ['Cake', 'Booze', 'Obscure']
+
+print(shopping + moreShopping)
+
+
+
+Looping through a list  with a for in loop  ~ Printing each item as sting
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+for value in shopping: 
+
+    print(value)
+
+
+Determining if specific item exists within list
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+if 'Bread' in shopping:
+    print("Yes, Bread is on the list")
+
+
+Checking how long a list is / how many values exist within a list with len() 
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+print(len(shopping))
