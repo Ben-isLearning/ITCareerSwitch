@@ -1,0 +1,32 @@
+Operator Precedence 
+
+**Order of Operations in Mathematics**
+
+**Order of Precedence in Python*
+
+>Higher will occur first 
+
+Parenthesis         ()
+f(---)              Function Call
+x[i:i]              Slicing
+x[i]                Subscription
+x.attribute         Attrbute Reference 
+Exponent            **
+~x                  Bitwise NOT 
++X | -X             Positive / Negative 
+* / %               Multiplication | dividsion | Modulus
++  -                Addition | Subtraction
+<< >>               Bitwise Shifts
+&                   Bitwise AND 
+^                   Bitwise XOR 
+|                   Bitwise OR 
+
+in  | not in 
+is  | not is 
+< <= > >= <> 
+!= ==               Comparisons, Membership, Identity 
+
+not x               Boolean NOT
+and                 Boolean AND 
+or                  Boolean OR
+lambda              Lambda expression 

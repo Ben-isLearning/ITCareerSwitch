@@ -17,8 +17,30 @@ shopping[1:7:2]  (Start @1st index : End Before @7th index : Count in increments
 people = ["tom", "dick", "harry"]
 
 print("The name is...") 
-for person in people[:2]}
+for person in people[:2]:
     print(person.title())
 
 
 people = ["tom", "dick", "harry", "tom", "dick", "harry", "tom", "dick", "harry"]
+for person in people[2:8:2]:
+    print(person.title())
+
+
+
+    
+shopping = ['Bread', 'Milk', 'Eggs', 'Generic']
+print(shopping[1:3])
+
+
+people = ["tom", "dick", "harry"]
+
+print("The names are ...")
+for person in people[:3]:
+    print(person.title())
+
+print("-----------------------")
+
+people = ["tom", "dick", "harry", "tom",
+          "dick", "harry", "tom", "dick", "harry", "tom", "dick", "harry", "tom", "dick", "harry", "tom", "dick", "harry"]
+for person in people[2:18:2]:
+    print(person.title())

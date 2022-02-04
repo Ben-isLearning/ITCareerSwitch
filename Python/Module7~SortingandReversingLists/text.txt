@@ -6,7 +6,42 @@ alphabet = ["beta", "gamma", "omega", "alpha"]
 alphabet.sort()
 
 
-Or in reverse order 
+Or in alphabeticallyt reversed order (C, B, A etc)
 
 alphabet = ["beta", "gamma", "omega", "alpha"]
 alphabet.sort(reverse=True)
+
+or Just reverse whats been put down. 
+
+alphabet = ["beta", "gamma", "omega", "alpha"]
+alphabet.revese()
+
+sort() Permenantly changes the data. 
+
+sorted() does not. 
+
+
+
+alphabet = ["beta", "gamma", "omega", "alpha"]
+alphabet.sort()
+
+print(alphabet)
+
+alphabet = ["beta", "gamma", "omega", "alpha"]
+alphabet.sort(reverse=True)
+
+print(alphabet)
+
+
+alphabet1 = ["beta", "gamma", "omega", "alpha"]
+alphabet1.reverse()
+
+print(alphabet1)
+
+
+alphabet2 = ["beta", "gamma", "omega", "alpha"]
+print(alphabet2)
+
+print("Lets change it up")
+print(sorted(alphabet2))
+
