@@ -1,0 +1,57 @@
+If statements 
+
+decision making is when we want to execute a code only if a certain condition is satisfied. 
+
+
+x = 12
+y = 3
+if x > y:
+    print("X is greater than Y")
+#Print function will be executed
+
+
+x = 1
+y = 3
+if x > y:
+    print("X is greater than Y")
+#Nothing will happen   
+
+
+Compound Conditional Statements: "else" and "elif" (Else IF) along with "if"
+
+x = 1
+y = 3
+if x > y:
+    print("X is greater than Y")
+else:
+    print("Y is greater than X")
+#Else will be executed. 
+
+
+x = 1
+y = 3
+if x > y:
+    print("X is greater than Y")
+elif x == y: 
+    print("X and Y are equal")
+else:
+    print("Y is greater than X")
+#Else will be executed. 
+
+
+x = 3
+y = 3
+if x > y:
+    print("X is greater than Y")
+elif x == y: 
+    print("X and Y are equal")
+else:
+    print("Y is greater than X")
+#elif will be executed. 
+
+
+#       Can use as many elif blocks as we like.  
+
+#       Only appropreate when we need one codeblock (to test one pass) to be evaluated. / Will skip rest of codeblocks (the tests)  
+
+#       If we need to check the all of the conditions of interest, use a series of if statements. 
