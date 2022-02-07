@@ -1,1 +1,24 @@
+Writing Files 
 
+Access mode is mission critical - can't do things if we're not in the right mode.
+
+with open("demo2.txt") as alpha:        << Open File
+    alphaContents = alpha.read()        << Read File
+    print(alphaContents)                << Print File
+
+beta = open("demo2.txt", "w")           << Open as "w" for WRITE
+beta.write("Are you sure?")             << Write (Overwrite)
+beta.close()                            << Close the file  >>CRITCAL<<
+
+with open("demo2.txt") as alpha:        << Open File 
+    alphaContents = alpha.read()        << Read File
+    print(alphaContents)                << Print File 
+
+
+To Create a New File, use open() 
+
+With either; 
+
+"x"     Create      ~ Will Create a File                    / Return error if file Exists 
+"a"     Append      ~ Will Create File if does not exist.   / Add to end   if file Exists
+"w"     Write       ~ Will Create file if does not exist.   / Overwrite    if file exists. 
