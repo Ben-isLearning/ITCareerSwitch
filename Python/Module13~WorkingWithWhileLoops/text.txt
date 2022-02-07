@@ -1,0 +1,30 @@
+while loops 
+
+(Loop through different iterations) (while a specific condition is true)
+Using loops allows us to automate and repeat similar tasks multiple times.
+
+a = 1
+while a < 6: 
+print(a) 
+a += 1
+
+
+with the "continue" statement - we ca nstop the current iteration, and continue with the next. 
+
+a = 1
+while a < 6: 
+a += 1
+if a == 4: 
+ continue
+print(a) 
+
+
+with the "break" statement - we can stop the loop even if the while condition is true.
+
+a = 1
+while a < 6: 
+print(a) 
+a += 1
+if a == 4: 
+break 
+a += 1

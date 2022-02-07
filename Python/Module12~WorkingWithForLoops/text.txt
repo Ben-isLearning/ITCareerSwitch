@@ -9,10 +9,16 @@ for variable in colors:
     print(x)
 
 
-** Recomended 
-
+** Recomended  Naming **
 colors = ["red", "blue", "green"]
 
 for color in colors: 
     print(color)
 
+
+
+in loops, range() is used to control how many times the loop will be repeated 
+range() takes 1, 2 or 3 arguements. 
+range(start, stop, step).
+
+range(0,3,1) > Start 0, Stop 3, count by 1. 

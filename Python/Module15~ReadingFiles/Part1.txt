@@ -1,0 +1,79 @@
+Reading Files
+
+To read or write to a file, first we need to open it!
+
+To open a file in Python, use open()
+~Function returns a file object (i.e a handle)
+~Can be used to read or modify the file 
+
+To read a file in Python, use read()
+~ This returns the entirety of the file.
+~ This can be used with an arguement to return an amount of characters~ read(x)
+
+To read a single line in Python, use readline()
+~ This returns the single 
+
+To close a connection after reading, use close()
+~ This prevents leaving data "open for use" 
+
+Alernatively, we can use "with" 
+~ This opens and closes the file (Not needing close())
+~ ++ Great for bugged programs (Programs that break before they reach close())
+
+To write to an existing file, we need to add parameter to open() 
+~ open("demo.txt", "a") | open("demo.txt", "w") 
+
+To write to an existing file, use write() 
+~ This adds on whatever is included to the file. 
+
+
+
+
+file object = open("file_name"[, "access_mode"])
+
+alpha = open("demo.txt", "r")
+print(alpha.read())                 << Reads whole document
+
+alpha = open("demo.txt", "r")
+print(alpha.read(24))               << Reads first 24 characters of Document. 
+alpha.close()
+
+beta = open("demo.txt", "r")
+print(beta.readline())              << Reads first Line of Document. 
+beta.close()
+
+with open("demo.txt") as charlie:   << Declare variable "charlie"    holding open("demo.txt")
+contents = charlie.read()           << Declare variable "contents"   holding charlie.read()
+print(contents)                     << Print                         "contents"
+
+delta = open("demo.txt", "a")               << Open "xxx.txt"
+delta.write("\n Its nearly lunch time!")    << Ammend data
+delta.close()                               << (In demo read/apend/read )
+
+
+
+
+
+Access mode is optional 
+Default is r (read) 
+rb  (Read + Binary)
+r+  (Read + Write)
+rb+ (Read + Write + Binary)
+
+w   (Write)
+wb  (Write in Binary)
+w+  (Write + Read | Same as w)
+wb+ (Write + Read + Binary | same as w)
+
+a   (Append)
+ab  (Append + Binary | same as a) 
+a+  (Append + Read | same as a )
+ab+ (Append + Binary + Read | same as a )
+
+
+Common: 
+r       Read-Only   ~ Access Only
+r+      Read+Write  ~ Write Level   ~ Overwrite or Create new file
+w       Write       ~ Write Level   ~ Overwrite or Create new file
+a       Append      ~ Added         ~ Add to end of file Or Create new file.  
+a+      Append+Read ~ 
