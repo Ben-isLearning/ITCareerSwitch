@@ -1,0 +1,18 @@
+for loops 
+
+(Loop through different iterations)
+Using loops allows us to automate and repeat similar tasks multiple times. 
+
+colors = ["red", "blue", "green"]
+
+for variable in colors: 
+    print(x)
+
+
+** Recomended 
+
+colors = ["red", "blue", "green"]
+
+for color in colors: 
+    print(color)
+
