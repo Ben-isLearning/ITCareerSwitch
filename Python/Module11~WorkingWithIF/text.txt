@@ -52,6 +52,6 @@ else:
 
 #       Can use as many elif blocks as we like.  
 
-#       Only appropreate when we need one codeblock (to test one pass) to be evaluated. / Will skip rest of codeblocks (the tests)  
+#       Only appropreate when we need one codeblock (to test one pass) to be evaluated. / Will skip rest of codeblocks  (the tests)  
 
 #       If we need to check the all of the conditions of interest, use a series of if statements. 
