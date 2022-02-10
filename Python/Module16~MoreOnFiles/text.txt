@@ -1,0 +1,26 @@
+** What is a Module? **
+Module = Library
+Library of code ready to be used. 
+
+How to use an external module in Python:
+         import module
+Ex:      import shutil  (For Copy)
+Ex:      import os      (For Rename / Delete)
+
+More on File~ 
+
+Python utilises operating system shell utilities
+
+Produce a copy of a file~   (Source, Destination)
+    shutil.copy(src,dst) 
+
+    shutil.copystat(src,dst)  (Includes MetaData)
+
+
+Rename a file~      ("Existing", "Desired")
+
+    os.rename("BenDemo.txt", "NoThanks.txt")
+
+Delete a File~      ("Existing")
+
+    os.remove("NoThanks.txt")
