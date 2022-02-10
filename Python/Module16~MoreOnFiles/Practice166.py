@@ -14,9 +14,12 @@ with open("BeefDemo.txt", "x") as mike:
 
 # Copy to New Name
 src = "BeefDemo.txt"
-dst = "BeefBeef.txt"
+dst = "DemoDemo.txt"
 
 shutil.copy(src, dst)
+
+# Rename ~ Could have renamed on Copy?
+os.rename("DemoDemo.txt", "BeefBeef.txt")
 
 # Append Copied File
 with open("BeefBeef.txt", "a") as romeo:
