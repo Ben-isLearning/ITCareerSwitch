@@ -1,0 +1,59 @@
+Reading console Inputs + Formatting Output.
+
+To receive information through the keyboard, Python uses input() or raw_input()
+
+input() is for 3.0 +  || raw_input is for 2.0 
+
+    #Python program will stop and await input from user to continue. 
+text = input("Enter Data Here:") 
+print("you said...", text)
+
+    #This will regurgitate whatever its given; "Yes" "123" "gfaem jkvakjsdv" 
+    ~~~ WHATEVER its given. 
+
+input() converts whatever its given into a string. 
+    So we need to expicitly convert results to number after receiving them.#
+
+
+_____________________________________________
+
+format()  allows us to format selected parts of a string. 
+
+> When we receive user/database input in the incorrect format - we can format() it to fit our means.
+add {} 
+
+salary = 27
+txt = "You make {} pennies a year"
+print(txt.format(salary))
+
+
+    (Index No)  (Conversion Code)
+add {field_name, conversion}
+
+salary = 27
+txt = "You make {0:f} pennies a year"
+print(txt.format(salary))
+
+
+
+(Conversion Codes)
+s for string
+d for Decimal Intigers 
+f for floating Numbers
+
+
+
+Without anything inside the {}.
+format() will serve whatever comes first. 
+
+string = "Ben likes {} and {} and rides {} {}."
+print(string.format("Pizza", "Python", "Monarch Butterflies", "Red"))
+
+>> Resulting in a strange sentence. 
+
+
+
+Can overcome this by inputting index numbers of the format items.
+
+string = "Ben likes {1} and {2} and rides {4} {3}."
+print(string.format("Pizza", "Python", "Monarch Butterflies", "Red"))
