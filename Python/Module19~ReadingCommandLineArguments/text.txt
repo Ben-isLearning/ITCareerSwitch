@@ -1,0 +1,18 @@
+Reading Command Line Arguements
+
+Command Line Arguements allow us to enable programs to act in a certian way.
+
+Ex: output additional information
+Ex: to read from specific source / Interpret data in desired format.
+
+Using 
+
+sys module 
+and sys.argv 
+
+(sys.argv is a list that contains the command-line arguments passed to the script)
+
+
+len(sys.argv) ~ counbt number of Arguments
+
+str(sys.argv) ~ show actual arguements being passed 
