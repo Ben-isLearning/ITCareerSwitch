@@ -1,0 +1,20 @@
+Merging Emails 
+
+Sending the same invitation to many people 
+> Name / Address changes
+> Content stays the same 
+
+Using ~ "With" to ensure files are closed 
+
+## Create New File (If existing file doesn't exist)
+
+with open("hello.txt", "w") as variable: 
+    variable.write("Hey there!")
+
+## Open file in Read mode
+
+x = open("Hello.txt", "r")
+print(x.read())
+x.close()
+
+
