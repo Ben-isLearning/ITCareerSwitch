@@ -1,0 +1,20 @@
+Using Math and Random Modules
+
+Mathematical operations can be performed by importing the math module
+
+"import math" 
+
+num = int(input("Give me a number, I'll square root it!  :))
+print(math.sqrt(num))
+
+
+Random Module ~ 
+Can use to make random numbers
+
+"import random"
+
+print("Printing random Number...")
+print(random.random())
+
+~ Returns random number between 0.0 to 1.0 
+Ex: 0.33789313543757993

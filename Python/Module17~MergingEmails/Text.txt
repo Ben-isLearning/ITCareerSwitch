@@ -6,15 +6,24 @@ Sending the same invitation to many people
 
 Using ~ "With" to ensure files are closed 
 
-## Create New File (If existing file doesn't exist)
+
+    ## Create New File (If existing file doesn't exist)
 
 with open("hello.txt", "w") as variable: 
     variable.write("Hey there!")
 
-## Open file in Read mode
+
+
+    ## Open file in Read mode / Read it / Close it  !
 
 x = open("Hello.txt", "r")
 print(x.read())
 x.close()
 
+
+
+Prerequisite: Need 2 Files ~ 1 for Names / 1 for Message
+(See practice 17)
+
+Open both files as read 
 

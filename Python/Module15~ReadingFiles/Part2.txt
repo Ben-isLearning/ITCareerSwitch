@@ -22,3 +22,8 @@ With either;
 "x"     Create      ~ Will Create a File                    / Return error if file Exists 
 "a"     Append      ~ Will Create File if does not exist.   / Add to end   if file Exists
 "w"     Write       ~ Will Create file if does not exist.   / Overwrite    if file exists. 
+
+
+
+yankee = open("BenText.txt", "x")   << Open File / Create Brand New File 
+
