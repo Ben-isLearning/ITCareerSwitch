@@ -1,0 +1,45 @@
+Defining Functions; 
+
+> A function is a block of code which only runs when it is called. 
+> Can pass data to a block of code, Known as a parameter. 
+
+
+            >Functions are defined using def 
+
+def function_one():
+    print("Hello World!")
+
+            >Functions need to be called
+
+function_one()
+
+
+
+            >Functions can be defined with parameters, seperated by Comas. 
+
+def function_two(fname, lname):
+    print(f"Hello there, {fname} {lname}. How do you do?")
+
+function_two("Dave", "Larke")
+
+
+            >Can create our own Modules using functions. 
+            >Create File A with Functionality 
+            >Create File B with <Other>, Import from File A. 
+
+
+    > File A 
+
+def greet():
+    print("Hello there, how are you today?")
+
+
+    > File B 
+
+import hello
+
+hello.greet()                           
+
+
+
+<< Function runs through dot notation to reference what module its being called from >>
