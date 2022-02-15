@@ -1,0 +1,52 @@
+Displaying Datetime 
+
+Date | Time | Datetime 
+Python has a bunch of functions to deal with this
+
+Date / Datetime are Objects! {}
+                
+                >Have to import "datetime" 
+                >   from datetime import date
+                    from datetime import time
+                    from datetime import datetime
+                (Can import classes too)
+
+
+Date        > Y / M / D
+Datetime    > Y / M / D / Hr / Sec / Ms
+
+_____________________________________________________________
+
+Displaying Working Directory
+
+To display the working directory, we need to use the os module
+
+"import os"
+
+os.getcwd()
+
+os.path.basename(file_path)
+
+
+________________________________________________________
+
+Displaying File Metadata
+
+To display file meta data, we need to use the os module
+
+"import os" 
+
+os.stat("FileNameHere.txt")
+
+Data returned: 
+
+st_mode     - Protection Bits
+st_ino      - inode number
+st_dev      - device
+st_nlink    - No of hardlinks
+st_uid      - user id of owner
+st_gid      - group id of owner
+st_size     - size of file in bytes
+st_atime    - time of most recent access
+st_mtime    - time of most recent content change 
+st_ctime    - time of most recent metadata change
