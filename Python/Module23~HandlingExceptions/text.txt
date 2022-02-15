@@ -1,0 +1,59 @@
+Handling Exceptions         / Error Handling
+
+> Code results in Error (Exception) but Syntax is correct. 
+
+example:    print(0/0)  
+
+>           Returns Exception/error ~ "ZeroDivsionError" - can't do this. 
+
+
+These Exceptions (Errors) 
+are caught (Identified) 
+by  "try" and "except"
+
+
+code block within "try" will be executed.
+If an Exeption (Error) occurs, the rest of the block will be skipped. 
+The "except" clause will be executed. 
+
+try:                                              < Try  
+    print(0/0)                                    < Codeblock              
+
+except ZeroDivisionError:                         < except <Error Name>:                 
+    print("You can't divide by zero!")            < exception handling                                
+
+
+What about numbers? 
+
+number = int(input("Enter a number between 1 - 10  :")):
+    print(f"{number}, Thank you for your submission.)
+
+-----------------------------------------------------------------
+
+try:
+    number = int(input("Enter a number between 1 - 10  :"))
+
+except ValueError:
+    print("Error ~ Please input a numeric value")
+    sys.exit()
+    # sys.exit() Stops Python.
+
+print(f"{number}, Thank you for your submission.")
+
+-----------------------------------------------------------------
+
+Handling Exceptions ~ 
+In addition to "try" and "except", There is also "else" and "finally" 
+Try X... Execpt Error: Do x... Else: Do y.... Finally: Do x...
+
+try: 
+    data = something_wrong
+
+except ValueError:
+    error message ~ Give int
+
+else: 
+    error message ~ give between 1-10
+
+Finally: 
+    Print("oops")
