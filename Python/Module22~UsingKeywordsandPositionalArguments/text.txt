@@ -1,0 +1,22 @@
+Keyword and Positional Arguments
+
+Python allows functions to be called using keyword arguments.
+
+When functions are called in thes way, the order of the arguments can be changed.
+
+
+>Keyword arguments must come after positional arguments.
+
+def greet(name, msg="How are you today?"):
+
+    print(f"Hey {name}, {msg}")
+
+
+        >>2 Keyword arguments
+greet(name="Dave", msg="I like Python")
+
+        >>2 Keyword arguments (Out of order)    - Will still print as intended. 
+greet(msg="I like Python", name="Dave")
+
+        >>1 Position / 1 Keyword                - Will print as intended. 
+greet("Dave", msg="I like Python")
