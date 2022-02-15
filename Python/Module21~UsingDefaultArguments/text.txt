@@ -1,0 +1,10 @@
+Default Arguments
+
+> Default arguement  - Python will take the value of (default arguement) 
+if no arguement is passed during the call 
+
+Default value is asssigned by = 
+keyword = value
+
+Once we have a single default argument, all arguements thereafter need default values too. 
+
